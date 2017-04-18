@@ -1,5 +1,6 @@
-## Tom Croshaw's Github
-### Code, Posts and Projects
+# Welcome to Tom's Github
+
+### Codeshare, Posts and Projects
 
 Welcome to the landing page for my personal github account.
 
