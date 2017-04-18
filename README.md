@@ -1,27 +1,23 @@
-## Welcome to tcroshaw's Github webpage
-
-
-### 
+### Tom Croshaw - Posts and Projects
 
 Welcome to the landing page for my personal github account.
 
-I have worked in analytics for many years but now I am beginning my exploration into the science of data, starting with the Data Science Immersive course at General Assembly in Sydney.
+I have worked in analytics for many years but now I am beginning my exploration deeper into data, starting with the Data Science Immersive course at General Assembly in Sydney (Mar - Jun 2017).
 
-Keep up to date with my progress with code, projects and posts here!
+Keep up to date with my progress with coding, projects and posts here!
 
 ```markdown
 
-# Header 1
-## Header 2
-### Header 3
+# Social Data to Predict the Severity Natural Catastrophes
 
-- Bulleted
-- List
+An investigation into how social data can be used to predict the severity of natural catastrophes.
 
-1. Numbered
-2. List
+Can social data help us determine:
+- Which areas have sustained the greatest damage?
+- How large will the financial loss be?
+- 
 
-**Bold** and _Italic_ and `Code` text
+_Please follow the link below to view the progress of the investigation:_
 
-[Link](https://tcroshaw.github.io/capstone/) and ![Image](src)
+[https://tcroshaw.github.io/capstone/]
 ```
