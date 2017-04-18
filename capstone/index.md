@@ -10,6 +10,6 @@ You will present this information in a slide deck and in Pecha Kucha format, 3 s
 
 To introduce you to my investigations, follow the link to the slides for my 3 minute lightning talk.
 
-[Capstone Part-01 Presentation](https://github.com/tcroshaw/GA_DSI_Capstone/part-01/)
+[Capstone Part-01 Presentation](https://github.com/tcroshaw/GA_DSI_Capstone/blob/master/part-01/tom_part01_presentation.pdf)
 
 _More to follow soon..._
