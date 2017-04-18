@@ -19,4 +19,4 @@ Can social data help us determine:
 
 Please follow the link below to view the progress of the investigation:
 
-[DSI Capstone Project](tcroshaw.github.io/capstone/index.md)
+[DSI Capstone Project](/capstone/index.md)
