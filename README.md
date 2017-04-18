@@ -7,6 +7,7 @@ I have worked in analytics for many years but now I am beginning my exploration 
 
 Keep up to date with my progress with coding, projects and posts here!
 
+![image](https://media.giphy.com/media/3o7TKOrTKTwdIFBi2k/giphy.gif)
 
 ### Can Social Data Predict the Severity Natural Catastrophes?
 
