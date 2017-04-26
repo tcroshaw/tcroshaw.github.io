@@ -4,7 +4,7 @@
 
 Welcome to the landing page for my personal github account!
 
-My career has taken me from studying rocks as a geologist in the mines of Western Australia to analysing catastrophes in the insurance industry as a research analyst. The success of these roles and the services they provide rely on a common element: **Data**. I now find myself at General Assembly studying the Data Science Immersive course in Sydney (Mar - Jun 2017), to learn the tools and techniques to make better decisions through data.
+My career has taken me from studying rocks as a geologist in the mines of Western Australia to analysing catastrophes in the insurance industry as a research analyst. The success of these roles and the services they provide rely on a common element: **Data**. I now find myself at General Assembly studying the Data Science Immersive course in Sydney (Mar - Jun 2017), to learn the tools and techniques to create powerful insights and predictions with data.
 
 This page will keep you up to date with progress on my data science journey and I will share coding, projects and posts here as I go!
 
