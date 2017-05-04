@@ -29,3 +29,5 @@ I have chosen these events because they are two of the most significant hail sto
 Now that the project is pitched, I will begin exploring my data further and report back with my findings.  
 
 _Next: Exploratory Data Analysis. More to follow soon..._
+
+<img src="tcroshaw.github.io/images/wordcloud_hail_sample.png" alt="hi" class="inline"/>
