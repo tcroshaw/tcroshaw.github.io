@@ -32,7 +32,6 @@ Now that the project is pitched, I will begin exploring my data further and repo
 
 ## _5th May 2017 - Capstone Part 02!_
 
-
 In this section of the capstone I will refine the problem statement and deliverables and perform an exploratory data analysis. 
 
 Some specific goals of this project are to:
@@ -47,6 +46,7 @@ Success Criteria include:
 - Effective processing the twitter data to identify the expected signatures (i.e.: key words such as 'hail', 'storm', 'damage'), indicating the type of event and how damaging/severe it is.
 - Oberserving relationships and sentiment in the processed natural language of tweets.
 - Identification of an algorithm, or combination of algorithms, that can accurately indicate/classify a catastrophic hail event from tweets.*
+
 *Note that at this stage the target variables for classification are still under investigation.
 
 ![image](https://github.com/tcroshaw/tcroshaw.github.io/blob/master/images/wordcloud_hail_sample.png)
@@ -57,7 +57,8 @@ Sifter is a service that provides search and retrieve access to every undeleted 
 https://sifter.texifter.com/
 
 For my project I purchased two datasets:
-- Primary dataset: Brisbane Hail storm With the help of sifter, I performed the following search function to extract the data:
+
+**Primary dataset: Brisbane Hail storm** With the help of sifter, I performed the following search function to extract the data:
 
 Rule: (contains hail OR storm OR damage OR flood OR insur OR "golf ball"~6 OR "tennis ball"~6 OR lightning OR thunder OR #brisbanehail OR #brisbanestorm OR "brisbane hail"~6 OR "brisbane storm"~6 OR #australiahail OR #australiastorm OR "australia hail"~6 OR "australia storm"~6 OR #auhail OR #austorm OR "au hail"~6 OR "au storm"~6 OR #qldhail OR #qldstorm OR "qld hail"~6 OR "qld storm"~6 OR #queenslandhail OR #queenslandstorm OR "queensland hail"~6 OR "queensland storm"~6 -(brisbane OR qld OR queensland OR australia OR au OR seqld) All duplicates removed.
 
@@ -65,12 +66,12 @@ This data query aims to capture all potential tweets that could relate to the id
 
 As this event was a more widespread and had a higher insured loss, I will use this as my primary dataset for the EDA/model building (i.e.: my training data). The final dataset was delivered in csv format.
 
-- Secondary dataset: Sydney Hail storm I performed a similar search in Sifter to gather data for a hail event in Sydney on 25th April 2015.
+**Secondary dataset: Sydney Hail Storm **I performed a similar search in Sifter to gather data for a hail event in Sydney on 25th April 2015.
 
 Rule: (contains hail OR storm OR damage OR flood OR "golf ball"~6 OR "tennis ball"~6 OR insur OR lightning OR thunder OR #sydneyhail OR #sydneystorm OR "sydney hail"~6 OR "sydney storm"~6 OR #australiahail OR #australiastorm OR "australia hail"~6 OR " australia storm"~6 OR #auhail OR #austorm OR "au hail"~6 OR "au storm"~6 OR #nswhail OR #nswstorm OR "nsw hail"~6 OR "nsw storm"~6 -(sydney OR nsw OR "new south wales" OR australia OR au) All duplicates removed.
 
 This dataset will be used as my secondary data (i.e.: my test data). The final dataset was delivered in csv format.
 
-- Supporting dataset: ICA Catastrophe Data 2016 This dataset was sourced from the Insurance Council of Australia (ICA). The Insurance Council of Australia collects catastrophe related claims data from the Australian market as part of its role in supporting the industry to deliver repairs, rebuilding and recovery services following large disasters. The ICA Catastrophe Database commenced in 1967 and records insurance loss estimates for declared insurance catastrophe events.
+**Supporting dataset: ICA Catastrophe Data 2016** This dataset was sourced from the Insurance Council of Australia (ICA). The Insurance Council of Australia collects catastrophe related claims data from the Australian market as part of its role in supporting the industry to deliver repairs, rebuilding and recovery services following large disasters. The ICA Catastrophe Database commenced in 1967 and records insurance loss estimates for declared insurance catastrophe events.
 
 This dataset will be used as a reference for the two major hail events in 2014 and 2015. It will also serve as a useful guide for future events to investigate.
