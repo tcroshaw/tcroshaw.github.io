@@ -30,4 +30,4 @@ Now that the project is pitched, I will begin exploring my data further and repo
 
 _Next: Exploratory Data Analysis. More to follow soon..._
 
-<img src="tcroshaw.github.io/images/wordcloud_hail_sample.png" class="inline"/>
+![image](https://github.com/tcroshaw/tcroshaw.github.io/tree/master/images/wordcloud_hail_sample.png)
