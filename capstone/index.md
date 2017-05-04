@@ -49,7 +49,7 @@ Success Criteria include:
 
 *Note that at this stage the target variables for classification are still under investigation.
 
-![image](https://github.com/tcroshaw/tcroshaw.github.io/blob/master/images/wordcloud_hail_sample.png)
+<img src="wordcloud_hail_sample.png" alt="">
 
 ### Data:
 
