@@ -102,7 +102,7 @@ This does not sound like a reliable resource for investigate tweets on natural c
 
 Signficiant spikes in the use of "hail" are observed in tweets at 6 - 8 AM GMT, which is 3 - 5PM Brisbane Daylight time. This corresponds with the known time of the major hail event in Brisbane. Another peak occurs later in the series - what could this relate to?
 
-<img src="dhail_sample_word_tweet_count.png" alt="">
+<img src="hail_sample_word_tweet_count.png" alt="">
 
 The above graph shows the key words which are included within tweets that contain the word "hail" over the 24 hour period. Location information such as Brisbane and Australia are seen, as well as emotive words such as "massive, super, worst", all of which will be critical in my tweet classification process in the next phase of the capstone. Could "golf" and "ball" be related..?
 
