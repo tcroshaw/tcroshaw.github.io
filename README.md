@@ -13,7 +13,7 @@ This page will keep you up to date with progress on my data science journey and 
 
 ![image](https://media.giphy.com/media/3o7TKOrTKTwdIFBi2k/giphy.gif)
 
-## Can Social Data Predict the Severity of Natural Catastrophes?
+## Can Social Data Predict a Natural Catastrophe?
 
 
 This project is an investigation into how Twitter data can be used to predict the severity of major natural catastrophes. Specifically, can social data help us determine:
