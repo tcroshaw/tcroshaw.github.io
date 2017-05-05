@@ -93,7 +93,7 @@ Some key insights from my EDA of the primary dataset of the Brisbane Hail twitte
 
 <img src="device_tweet_count.png" alt="">
 
-**Twittascope!!??* What is this?**
+**Twittascope!!??**
 Taken from Twittascope website: "About Twittascope.com: Twittascope tweets authentic horoscopes for your Twitter account each morning. Provided by the Daily Insight Group, this leading horoscope service offers a daily dose of astrological insight."
 
 This does not sound like a reliable resource for investigate tweets on natural catastrophes, so although this is a large sample of data we will exclude it from our project.
@@ -108,6 +108,6 @@ The above graph shows the key words which are included within tweets that contai
 
 ### Next steps:
 
-For the next stage of the Captsone I will refine the NLP processes already used in my EDA and continue to look at sub-groups of key words, investigate bi/tri grams and other relationships. I will then continue forward and investigate appropriate algorithms.
+For the next stage of the Capstone I will refine the NLP processes already used in my EDA and continue to look at sub-groups of key words, investigate bi/tri grams and other relationships. I will then continue forward and investigate appropriate algorithms.
 
 _Next Up... Part 3: Progress Report + Preliminary Findings: Week 9_
