@@ -18,9 +18,9 @@ This page will keep you up to date with progress on my data science journey and 
 
 This project is an investigation into how Twitter data can be used to predict a major natural catastrophes. Specifically, can social data help us determine:
 - How large will the financial loss be?
-- How many claims can be expected?
+- How many claims will occur?
 - Which areas have sustained the greatest damage?
 
 Please follow the link below to view the progress of the investigation:
 
-[DSI Capstone Project](/capstone/index.md)
+### [DSI Capstone Project](/capstone/index.md)
