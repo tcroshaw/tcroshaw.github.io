@@ -2,7 +2,7 @@
 
 ![image](https://media.giphy.com/media/CXLPSXYcP0mHe/giphy.gif)
 
-**Capstone, Part 1: Capstone Topic + Dataset Validation: Week 4**
+## 13th April 2017 - Capstone, Part 1: Capstone Topic + Dataset Validation (Week 4)
 
 In Part 1 of the Capstone, the brief was to choose a topic and problem, describing your goals & criteria for success, potential audience(s), and identifying 1-2 potential datasets. 
 
@@ -30,7 +30,7 @@ Now that the project is pitched, I will begin exploring my data further and repo
 
 ------
 
-## _5th May 2017 - Capstone Part 02!_
+## 5th May 2017 - Capstone Part 02! Problem Statement + EDA (Week 7)
 
 <img src="wordcloud_hail_sample.png" alt="">
 
