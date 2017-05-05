@@ -1,4 +1,4 @@
-# Can Social Data Predict the Severity Natural Catastrophes?
+# Can Social Data Predict a Natural Catastrophe?
 
 ![image](https://media.giphy.com/media/CXLPSXYcP0mHe/giphy.gif)
 
@@ -15,7 +15,7 @@ To introduce you to my project, please follow the link to the slide deck of my 3
 
 _Project Summary_
 
-The main objective of this project is to develop a model that can predict the severity of a natural catastrophe from social data within a certain level of confidence. Following an exploratory data analysis, I will use natural language processing to analyse social posts and investigate which machine learning algorithms generate the most robust models to prove my hypothesis - that the language, volume and interconnectivity of social posts can indicate the a catastrophe's magnitude. 
+The main objective of this project is to develop a model that can predict a natural catastrophe from social data within a certain level of confidence. Following an exploratory data analysis, I will use natural language processing to analyse social posts and investigate which machine learning algorithms generate the most robust models to prove my hypothesis - that the language, volume and interconnectivity of social posts can indicate the a catastrophe's magnitude. 
 
 The factors that determine the severity of these events, particularly from an insurance perspective, include  financial/insurance loss, the number of claims or damage reports and the geographic extent. These will be the key indicators of catastrophic loss I will hope to get from the model.
 
