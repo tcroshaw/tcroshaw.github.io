@@ -148,7 +148,7 @@ Analysis of this data has shown that within our sample, there is clearly a skew 
 
 Comparing the words that occur during the two events, especially over time, has been crucial in supporting my idea that twitter can identify natural catastrophes... So much so that another type of event - Nepal Earthquake - was recorded within my EDA!
 
-<img src="top-words-corr.png" alt="">
+<img src="top_words_corr.png" alt="">
 
 The highest correlated words in my combined dataset (for both Brisbane and Sydney events) are: quake, hits, big and Nepal... We can now deduce that the twitter data also picked up another major natural catastrophe on this date: the Nepal Earthquake!
 The additional discovery of the earthquake event provides validation of the searching method, showing that this analysis can not only predict hail but also other natural disasters. This increases the scope of the project as well as potential future applications.
@@ -163,7 +163,7 @@ _Preliminary Algorithm Development_
 
 Whilst modelling is still in its early stage, I have identified that classification algorithms will be the most appropriate for my text analysis. To begin with, I have investigated logisitic regression and decision tree classifications. I have selected key words indentified during the Bag-of-Words analysis and topic modelling to use as predictors and generated a hail 'class' as the target variable.
 
-<img src="log-reg-model-coef.png" alt="">
+<img src="logregcoef.png" alt="">
 
 Overall the decision tree classification:...
 ...
