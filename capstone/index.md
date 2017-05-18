@@ -2,7 +2,7 @@
 
 ![image](https://media.giphy.com/media/CXLPSXYcP0mHe/giphy.gif)
 
-## 13th April 2017 - Capstone, Part 1: Capstone Topic + Dataset Validation (Week 4)
+## 13th April 2017 - Setting the Scene: A Catastrophic Twitter Analysis
 
 In Part 1 of the Capstone, the brief was to choose a topic and problem, describing your goals & criteria for success, potential audience(s), and identifying 1-2 potential datasets. 
 
@@ -30,7 +30,7 @@ Now that the project is pitched, I will begin exploring my data further and repo
 
 ------
 
-## 5th May 2017 - Capstone Part 02! Problem Statement + EDA (Week 7)
+## 5th May 2017 - Brisbane Hailstorm - A Preliminary Exploratory Data Analysis
 
 <img src="wordcloud_hail_sample.png" alt="">
 
@@ -122,4 +122,62 @@ _Could "golf" and "ball" be related..?_ It is common to associate hail size with
 
 For the next stage of the Capstone I will refine the NLP processes already used in my EDA and continue to look at sub-groups of key words, investigate bi/tri grams and other relationships. I will then investigate potential appropriate algorithms to use in the model development.
 
-_Next Up... Part 3: Progress Report + Preliminary Findings: Week 9_
+## 17th May 2017 - NLP continued, preliminary modelling and another type of catastrophe..?
+
+![image](https://media.giphy.com/media/fsMkxhVeKwGac/giphy.gif?response_id=591da0615bfef578251edb9f)
+
+This update will provide details of the key insights I have gathered during the latest stage of this investigation and some critical feedback on my approach so far.
+
+I have found that analysing text data is challenging, particularly Twitter data(!), but if performed correctly the results can be very powerful.
+
+***Approach**
+
+My approach to continuing my analysis can be broken down into four main sections
+
+_Data Cleaning and Outlier removal_
+
+In my preliminary EDA I found that cleaning the user information was a significant step in improving the confidence of my records; identifying useless data sources (i.e.: Twittascope!) and cleaning the data was a very important step. The date information also me to plot the frequency of words over time and removing outliers (of numeric user variables) ensures I remove records that are potentially misleading from media or 'bots'.
+
+I have now integrated the Sydney hail event and processed this and the Brisbane hail event in a single dataset. This ensures consitency in data munging and easier analysis grouping.
+
+_Bag-Of-Words Exploratory Data Analysis:_
+
+Using tokenisation, stop-word removal and other natural language processing techniques are critical steps for this project. The output of which is a vectorised dataframe of all the key words used in tweets. Vectorisation also allowed me to create targets for classification (i.e.: using the 'hail' word use as a class).
+
+Analysis of this data has shown that within our sample, there is clearly a skew of word counts to low frequency (as expected!) however there are some key words which are prevalent throughout the tweets due to the volume of tweets on that subject (i.e.: the hail events). 
+
+Comparing the words that occur during the two events, especially over time, has been crucial in supporting my idea that twitter can identify natural catastrophes... So much so that another type of event - Nepal Earthquake - was recorded within my EDA!
+
+<img src="top-words-corr.png" alt="">
+
+The highest correlated words in my combined dataset (for both Brisbane and Sydney events) are: quake, hits, big and Nepal... We can now deduce that the twitter data also picked up another major natural catastrophe on this date: the Nepal Earthquake!
+The additional discovery of the earthquake event provides validation of the searching method, showing that this analysis can not only predict hail but also other natural disasters. This increases the scope of the project as well as potential future applications.
+
+_LDA - Topic Modelling_
+
+Latent Dirichlet Allocation, a type of statistical model for discovering the abstract "topics" that occur in a collection of documents, has helped identify the core groupings of words in the data for our events, as well as other major topics within the data beyond these. Grouping the data by location and time has allowed a powerful analysis of the key words that occur together; by narrowing the dataset into regions which are specific to the hail events, the key words (and potentially predictors) indicating hail are more strongly recognised.
+
+Beyond the hail event, other topics that were identified in the LDA include thanksgiving (and associated poor travel conditions!), boko haram and a very poor performance by the Melbourne Storm against the Manly Sea Eagles.
+
+_Preliminary Algorithm Development_
+
+Whilst modelling is still in its early stage, I have identified that classification algorithms will be the most appropriate for my text analysis. To begin with, I have investigated logisitic regression and decision tree classifications. I have selected key words indentified during the Bag-of-Words analysis and topic modelling to use as predictors and generated a hail 'class' as the target variable.
+
+<img src="log-reg-model-coef.png" alt="">
+
+Overall the decision tree classification:...
+...
+...
+
+**Lessons Learned:**
+
+- Dealing with null values removing outliers appropriately is important however there is a trade-off between improving the distribution of a variable and knocking out too much data.
+- The natural language processes and the sequence in which they are performed are very important when analysing text data, particularly 'messy' data such as tweets.
+- The method of using key terms from Bag-Of-Words and topic modelling is useful for textual analysis and identifying common terms, however limiting the predictors in classification modelling limits the success of the algorithms. Despite the high accuracy of our models, feature selection must be more robust to improve model performance.
+- Other algorithms may be more appropriate for this project and further investigation will be needed to ensure the correct machine learning methods are used.
+
+***Next Steps***
+
+1. More in-depth feature selection and principle component analysis
+2. Investigation of other classification models
+3. Potentially a sentiment analysis of the twitter data: do attitudes of tweets classify a natural catastrophe?
