@@ -10,8 +10,10 @@ This page will keep you up to date with progress on my data science journey and 
 
 ---
 
-#### Can Social Data Predict a Natural Catastrophe?
+## Can Social Data Predict a Natural Catastrophe?
 _April - June 2017_
+
+
 ![image](https://media.giphy.com/media/3o7TKOrTKTwdIFBi2k/giphy.gif)
 
 This project is an investigation into how Twitter data can be used to predict a major natural catastrophes. Specifically, can social data help us determine:
