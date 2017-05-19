@@ -128,27 +128,27 @@ For the next stage of the Capstone I will refine the NLP processes already used 
 
 ![image](https://media.giphy.com/media/fsMkxhVeKwGac/giphy.gif?response_id=591da0615bfef578251edb9f)
 
-This update will provide details of the key insights I have gathered during the latest stage of this investigation and some critical feedback on my approach so far.
+This update will provide details of the key insights gathered during the latest stage of this investigation and some critical feedback on my approach.
 
 I have found that analysing text data is challenging, particularly Twitter data(!), but if performed correctly the results can be very powerful.
 
 **Approach**
 
-My approach to continuing my analysis can be broken down into four main sections
+The approach to my analysis so far can be broken into four main sections
 
-_Data Cleaning and Outlier removal_
+_Data Cleaning and Outlier Removal_
 
-In my preliminary EDA I found that cleaning the user information was a significant step in improving the confidence of my records; identifying useless data sources (i.e.: Twittascope!) and cleaning the data was a very important step. The date information also me to plot the frequency of words over time and removing outliers (of numeric user variables) ensures I remove records that are potentially misleading from media or 'bots'.
+In my preliminary EDA I found that cleaning the user information was a significant step in improving the confidence of my records; identifying useless data sources (i.e.: Twittascope!) and cleaning the data was a very important step. The date information allowed me to plot the frequency of words over time and removing outliers (of numeric user variables) ensures I exclude records that are potentially misleading from media or 'bots'.
 
-I have now integrated the Sydney hail event and processed this and the Brisbane hail event in a single dataset. This ensures consitency in data munging and easier analysis grouping.
+I have now integrated the Sydney hail event and processed it with the Brisbane hail event in a single dataset. This ensures consitency in data munging and easier grouping for analysis.
 
 _Bag-Of-Words Exploratory Data Analysis:_
 
-Using tokenisation, stop-word removal and other natural language processing techniques are critical steps for this project. The output of which is a vectorised dataframe of all the key words used in tweets. Vectorisation also allowed me to create targets for classification (i.e.: using the 'hail' word use as a class).
+Tokenisation, stop-word removal and other natural language processing techniques are critical steps for this project. The output following these text cleaning exercises is a vectorised dataframe of all the key words used in tweets. Vectorisation also allowed me to create targets for classification (i.e.: using the 'hail' word use as a class).
 
-Analysis of this data has shown that within our sample, there is clearly a skew of word counts to low frequency (as expected!) however there are some key words which are prevalent throughout the tweets due to the volume of tweets on that subject (i.e.: the hail events). 
+Analysis of this data has shown that within our sample, there is clearly a skew of word counts to low frequency (as expected!) however there are some key words which are prevalent throughout tweet samples, which is likely due to the volume of tweets on specific subjects (i.e.: the hail events). 
 
-Comparing the words that occur during the two events, especially over time, has been crucial in supporting my idea that twitter can identify natural catastrophes... So much so that another type of event - Nepal Earthquake - was recorded within my EDA!
+Comparing the words that occur during the two events, especially over time, has been crucial in supporting my idea that twitter can identify natural catastrophes of significance... So much so that another type of event was recorded within my EDA!
 
 <img src="top_words_corr.png" alt="">
 
@@ -156,17 +156,17 @@ The highest correlated words in my combined dataset (for both Brisbane and Sydne
 
 <img src="nepal_eq.jpg" alt="">
 
-The additional discovery of the earthquake event provides validation of the searching method, showing that this analysis can not only predict hail but also other natural disasters. This increases the scope of the project as well as potential future applications.
+This additional discovery provides validation of the searching method, showing that this analysis can not only predict hail but also other natural disasters. This increases the scope of the project as well as potential future applications.
 
 _LDA - Topic Modelling_
 
-Latent Dirichlet Allocation, a type of statistical model for discovering the abstract "topics" that occur in a collection of documents, has helped identify the core groupings of words in the data for our events, as well as other major topics within the data beyond these. Grouping the data by location and time has allowed a powerful analysis of the key words that occur together; by narrowing the dataset into regions which are specific to the hail events, the key words indicating hail (and potential predictors) are more strongly recognised.
+Latent Dirichlet Allocation, a type of statistical model for discovering abstract "topics" that occur in a collection of text records, has helped identify the core groupings of words in the data for our samples, as well as other significant topics within the data beyond these. Grouping the data by location and time has allowed a powerful analysis of the key words that occur together; by narrowing the dataset into regions which are specific to the hail events, the key words indicating hail (and potential predictors) are more strongly recognised.
 
 <img src="topic-modelling.png" alt="">
 
-When performing the LDA on the full dataset, two other topics were identified:
-- The Nepal Earthquake and a very poor performance by the Melbourne Storm against the Manly Sea Eagles on 25th April 2015.
-- Other events identified over these dates were the thanksgiving period in 2014 (and associated poor travel conditions!) and tweets concerning boko haram.
+When performing the LDA on the full dataset, two other topics were identified (as above):
+- 1. The Nepal Earthquake and 2. a very poor performance by the Melbourne Storm against the Manly Sea Eagles on 25th April 2015.
+- Other events identified over these dates were the thanksgiving period in 2014 (and the associated poor travel weather!) and tweets concerning Boko Haram.
 
 _Preliminary Algorithm Development_
 
@@ -174,7 +174,7 @@ Whilst modelling is still in its early phase, I have identified that classificat
 
 <img src="logregcoef.png" alt="">
 
-Overall the decision tree classification model provides a slightly higher accuracy score than the logistic regression, the coefficients plotted on the bar graph above. Both algorithms however do not predict high values of true positives, ~18% less than our known amount of positive hail classes. A more robust feature selection process that includes Principle Component Analysis must next be performed to improve model performance.
+Overall the decision tree classification model provides a slightly higher accuracy score than the logistic regression, the coefficients plotted on the bar graph above. Both algorithms however do not predict high values of true positives, ~18% less than our known amount of positive hail classes. A more robust feature selection process that includes Principle Component Analysis must be performed next to improve model performance.
 
 **Lessons Learned from this stage of the project:**
 
@@ -186,7 +186,7 @@ Overall the decision tree classification model provides a slightly higher accura
 ***Next Steps***
 
 1. More in-depth feature selection and principle component analysis
-2. Investigation of other classification models
+2. Investigation of other classification models: SVM, Naive Bayes and Random Forest in particular.
 3. Potentially a sentiment analysis of the twitter data: do attitudes of tweets classify a natural catastrophe?
 
 -----
