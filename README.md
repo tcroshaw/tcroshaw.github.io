@@ -16,10 +16,10 @@ _April - June 2017_
 
 ![image](https://media.giphy.com/media/3o7TKOrTKTwdIFBi2k/giphy.gif)
 
-This project is an investigation into how Twitter data can be used to predict a major natural catastrophes. Specifically, can social data help us determine:
-- How large will the financial loss be?
-- How many claims will occur?
-- Which areas have sustained the greatest damage?
+This project is an investigation into how Twitter data can be used to predict major natural catastrophes. Specifically, can social data help us determine whether:
+- There will be a large financial loss
+- A significant number of insurance claims will be received
+- A large area will be impacted by the event
 
 This investigation was the Data Science Immersive Capstone Project at General Assembly in Sydney, Please follow the link below to view the progress of the analysis:
 
