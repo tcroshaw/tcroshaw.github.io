@@ -122,7 +122,9 @@ _Could "golf" and "ball" be related..?_ It is common to associate hail size with
 
 For the next stage of the Capstone I will refine the NLP processes already used in my EDA and continue to look at sub-groups of key words, investigate bi/tri grams and other relationships. I will then investigate potential appropriate algorithms to use in the model development.
 
-## 17th May 2017 - NLP continued, preliminary modelling and another type of catastrophe..?
+---
+
+## 17th May 2017 - NLP continued, preliminary modelling and... Another type of catastrophe?
 
 ![image](https://media.giphy.com/media/fsMkxhVeKwGac/giphy.gif?response_id=591da0615bfef578251edb9f)
 
@@ -150,26 +152,31 @@ Comparing the words that occur during the two events, especially over time, has 
 
 <img src="top_words_corr.png" alt="">
 
-The highest correlated words in my combined dataset (for both Brisbane and Sydney events) are: quake, hits, big and Nepal... We can now deduce that the twitter data also picked up another major natural catastrophe on this date: the Nepal Earthquake!
+The highest correlated words in my combined dataset (for both Brisbane and Sydney events) are: quake, hits, big and Nepal... We can now deduce that the twitter data also picked up another major natural catastrophe on this date: the Nepal Earthquake on 25th April 2015!
+
+<img src="nepal_eq.jpg" alt="">
+
 The additional discovery of the earthquake event provides validation of the searching method, showing that this analysis can not only predict hail but also other natural disasters. This increases the scope of the project as well as potential future applications.
 
 _LDA - Topic Modelling_
 
-Latent Dirichlet Allocation, a type of statistical model for discovering the abstract "topics" that occur in a collection of documents, has helped identify the core groupings of words in the data for our events, as well as other major topics within the data beyond these. Grouping the data by location and time has allowed a powerful analysis of the key words that occur together; by narrowing the dataset into regions which are specific to the hail events, the key words (and potentially predictors) indicating hail are more strongly recognised.
+Latent Dirichlet Allocation, a type of statistical model for discovering the abstract "topics" that occur in a collection of documents, has helped identify the core groupings of words in the data for our events, as well as other major topics within the data beyond these. Grouping the data by location and time has allowed a powerful analysis of the key words that occur together; by narrowing the dataset into regions which are specific to the hail events, the key words indicating hail (and potential predictors) are more strongly recognised.
 
-Beyond the hail event, other topics that were identified in the LDA include thanksgiving (and associated poor travel conditions!), boko haram and a very poor performance by the Melbourne Storm against the Manly Sea Eagles.
+<img src="topic-modelling.png" alt="">
+
+When performing the LDA on the full dataset, two other topics were identified:
+- The Nepal Earthquake and a very poor performance by the Melbourne Storm against the Manly Sea Eagles on 25th April 2015.
+- Other events identified over these dates were the thanksgiving period in 2014 (and associated poor travel conditions!) and tweets concerning boko haram.
 
 _Preliminary Algorithm Development_
 
-Whilst modelling is still in its early stage, I have identified that classification algorithms will be the most appropriate for my text analysis. To begin with, I have investigated logisitic regression and decision tree classifications. I have selected key words indentified during the Bag-of-Words analysis and topic modelling to use as predictors and generated a hail 'class' as the target variable.
+Whilst modelling is still in its early phase, I have identified that classification algorithms will be the most appropriate for my text analysis. To begin with, I have investigated logisitic regression and decision tree classifications. I have selected key words indentified during the Bag-of-Words analysis and topic modelling to use as predictors and generated a hail 'class' as the target variable. My preliminary investigation looks at how well the Brisbane Hail data performs...
 
 <img src="logregcoef.png" alt="">
 
-Overall the decision tree classification:...
-...
-...
+Overall the decision tree classification model provides a slightly higher accuracy score than the logistic regression, the coefficients plotted on the bar graph above. Both algorithms however do not predict high values of true positives, ~18% less than our known amount of positive hail classes. A more robust feature selection process that includes Principle Component Analysis must next be performed to improve model performance.
 
-**Lessons Learned:**
+**Lessons Learned from this stage of the project:**
 
 - Dealing with null values removing outliers appropriately is important however there is a trade-off between improving the distribution of a variable and knocking out too much data.
 - The natural language processes and the sequence in which they are performed are very important when analysing text data, particularly 'messy' data such as tweets.
@@ -181,3 +188,5 @@ Overall the decision tree classification:...
 1. More in-depth feature selection and principle component analysis
 2. Investigation of other classification models
 3. Potentially a sentiment analysis of the twitter data: do attitudes of tweets classify a natural catastrophe?
+
+-----
