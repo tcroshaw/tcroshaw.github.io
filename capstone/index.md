@@ -132,7 +132,7 @@ This update will provide details of the key insights I have gathered during the 
 
 I have found that analysing text data is challenging, particularly Twitter data(!), but if performed correctly the results can be very powerful.
 
-***Approach**
+**Approach**
 
 My approach to continuing my analysis can be broken down into four main sections
 
