@@ -6,9 +6,11 @@
 
 _Project Summary_
 
-The main objective of this project is to develop a model that can predict a natural catastrophe from social data within a certain level of confidence. Following an exploratory data analysis, I will use natural language processing to analyse social posts and investigate which machine learning algorithms generate the most robust models to prove my hypothesis - that language, volume and interconnectivity of social posts can indicate a catastrophe's magnitude. 
+The main objective of this project is to develop a model that can predict a natural catastrophe from social data. 
 
-The factors that determine the severity of these events, particularly from an insurance perspective, include  financial/insurance loss, the number of claims or damage reports and the geographic extent. These will be the key indicators of catastrophic loss I hope to get from the model.
+Following an exploratory data analysis, I will use natural language processing to analyse social posts and investigate which machine learning algorithms generate the most robust models to prove my hypothesis - that language, volume and interconnectivity of social posts can indicate a significant catastrophe is occurring. 
+
+The factors that determine a natural 'catastrophe', particularly from an insurance perspective, include financial/insurance loss, the number of claims or damage reports and the geographic extent. These will be the key indicators of catastrophic loss I hope to get from the model.
 
 As it is not possible to analyse all catastrophe types within the period of the Capstone, I will focus on analysing **Twitter data** for major Australian **hail storm** events. I have selected two events for my analysis:
 
