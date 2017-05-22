@@ -1,6 +1,4 @@
-# Welcome to Tom's Github
-
-### Codeshare, Posts and Projects
+## Projects, Posts and Codeshare
 
 Welcome to the landing page for my personal github account!
 
