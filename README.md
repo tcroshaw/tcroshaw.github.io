@@ -21,6 +21,8 @@ This project is an investigation into how Twitter data can be used to predict ma
 - A significant number of insurance claims will be received
 - A large area will be impacted by the event
 
-This investigation was the Data Science Immersive Capstone Project at General Assembly in Sydney, Please follow the link below to view the progress of the analysis:
+This investigation was my Data Science Immersive Capstone Project at General Assembly, Sydney. Please follow the link below to view the progress of the analysis:
 
 ### [Natural Catastrophe Twitter Investigation](/capstone/index.md)
+
+---
