@@ -1,6 +1,6 @@
 Welcome to the landing page for Tom's personal github account.
 
-Tom is a research analyst turned data scientist with a keen interest in the natural environment, science and of course... **Data!**
+Tom Croshaw is a research analyst turned data scientist with a keen interest in the natural environment, science and of course... **Data!**
 
 ---
 
