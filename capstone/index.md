@@ -207,13 +207,13 @@ Overall the decision tree classification model provides a slightly higher accura
 
 <img src="hail_cloud.png" alt="">
 
-This stage of the project brings together the data exploration and statistical analysis completed so far into a final delivery that includes sentiment analysis, a principle component analysis and a series of classification models.
+This stage of the project brings together the analysis completed so far into a final delivery that includes sentiment analysis, a principle component analysis and a series of classification models.
 
 ***Sentiment Analysis***
 
-In general, during very severe natural catastrophes, people tend to tweet emotive language to describe the events they're experiencing.
+Generally during very severe natural catastrophes, people tend to tweet emotive language to describe the events they're experiencing.
 
-Textblob is library for processing textual data. It returns the polarity score - a measure of the negativity, the neutralness, or the positivity of the text. This function was parsed over all tweets to understand how sentiment varied for tweets referring to different events.
+_Textblob_ is python library for processing textual data. The sentiment_analysis function returns the polarity score - a measure of the negativity, the neutralness, or the positivity of the text. This function was parsed over all tweets to understand how sentiment varied in for different catastrophe types.
 
 <img src="sentiment.png" alt="">
 
@@ -265,17 +265,17 @@ The moderate performance by hail in this model suggests that indepenent classifi
 
 ### Project Conclusion
 
-How well has our data analysis and modelling answered our original two goals?
+How well has this analysis answered our original two goals?
 
-##### Can twitter data detect hail events from the language people use in tweets?
+#### Can twitter data detect hail events from the language people use in tweets?
 
 The hail events were successfully identified at multiple stages in the analysis:
- - NLP successfully identifed words that relate to the hail events in question and recorded significant activity of their term during the time period each event was known to occur.
-- The topic modelling identified strong clusters of words that relate to the hail events, particularly when subsets of the data were analysed specific to the time periods of each storm.
-- Sentiment analysis recorded negative polarity of hails tweets exceeding the frequency of all-tweets. This aligns with the common trait for negative, extreme language during natural disasters.
+ - NLP successfully identifed words that relate to the hail events in question and recorded significant activity during the time period when each event was known to occur.
+- Topic modelling identified strong clustering of words that relate to the hail events, particularly when subsets of the data were analysed specific to the time periods of each storm.
+- Sentiment analysis recorded negative polarity of hails tweets exceeding the frequency of all-tweets. This aligns with the common trait for negative and extreme language during natural disasters.
 - The hail modelling also produced a number of very promising results. The predictors were able to produce a random forest classification algorithm that accurately predicted 80% true positives of known positives when trained on the full dataset. The presicion and recall of the model increases with training size and with further samples for more types of hail events, it will likely improve further.
 
-##### Can twitter data identify severe catastrophic hail events?
+#### Can twitter data identify severe catastrophic hail events?
 
 Knowing the impact of the Brisbane and Sydney hail events allowed us to draw some conclusions on how well language recognised more damaging catastrophes. There were a number of results that correctly indicate the severity of both events:
 - NLP: Recognition of terms relating to severity within the NLP processes; specifically the bag-of-words analysis and topic modelling of each event.
@@ -303,5 +303,4 @@ The following recommendations will improve this analysis prior to model deployme
 The following diagram outlines a potential model deployment framework for the random forest classification model:
 
 <img src="model_deployment.png" alt="">
-
-Check back next week for the final presentation and closing words.
+Check back next week for the final presentation and closing words...
