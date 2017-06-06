@@ -38,7 +38,7 @@ Now that the project is pitched, I will begin exploring my data further and repo
 
 ## 5th May 2017 - Brisbane Hailstorm - A Preliminary Exploratory Data Analysis
 
-<img src="wordcloud_hail_sample.png" style="max-width: 100px">
+<img src="wordcloud_hail_sample.png" alt="">
 
 In this stage of the investigation I will refine the problem statement, deliverables and perform an exploratory data analysis on my main Twitter dataset.
 
