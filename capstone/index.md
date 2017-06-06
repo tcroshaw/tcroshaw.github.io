@@ -241,19 +241,19 @@ Little evidence suggests that removing principle components would signficantly r
 
 ***Classification Algorithm Investigation***
 
-### 1. Hail Modelling 
+#### 1. Hail Modelling 
 
 A random forest classification algorithm was found to be the optimal model for the hail class target. The principle component analysis did not suggest that limiting components would be effective in reducing dimensionality, therefore all predictors (i.e.: words in the vectorised, normalised data) would be used in modelling. Whilst Naive Bayes, Stochastic Gradient Descent and Decision Trees all provided high accuracy score, their f1 scores were less than the ensemble random forest classifier, which was driven by the high recall value of the hail-class prediction (see ROC curve below for overall classification performance of each tested model). When the random forest classifier was optimised via gridsearching, the hyperparameters and fit with 100% of the data increased the recall to 0.82; a very positive result for the ability of tweets to predict hail.
 
 <img src="roc_hail_models.png" alt="">
 
-### 2. Severity Modelling
+#### 2. Severity Modelling
 
 When using the optimised model to train/test for each event, the classification results were very poor despite their high accuracy scores. This indicates that the tweets in each events use different language to communicate the hail. A subsequent classifiction analysis, using each event as class for a hail-only subset of the data, confirms this belief by producing moderately strong classification. It also produces common words used to describe severe events (chaos, slammed, worst) as the features with highest importance.
 
 <img src="features_severity.png" alt="">
 
-### 3. Multiple Catastrophe Classification
+#### 3. Multiple Catastrophe Classification
 
 A final analysis then introduced earthquake as a class with hail. This produced a high accuracy score of over 0.95 and strong classification metrics, particularly for earthquake. 
 
@@ -265,12 +265,12 @@ The moderate performance by hail in this model suggests that indepenent classifi
 
 ### Project Conclusion
 
-How well has this analysis answered our original two goals?
+How well has this analysis delivered on our original goals?
 
 #### Can twitter data detect hail events from the language people use in tweets?
 
 The hail events were successfully identified at multiple stages in the analysis:
- - NLP successfully identifed words that relate to the hail events in question and recorded significant activity during the time period when each event was known to occur.
+ - NLP successfully identifed words that relate to the hail events in question and record significant activity during the known time period of each event.
 - Topic modelling identified strong clustering of words that relate to the hail events, particularly when subsets of the data were analysed specific to the time periods of each storm.
 - Sentiment analysis recorded negative polarity of hails tweets exceeding the frequency of all-tweets. This aligns with the common trait for negative and extreme language during natural disasters.
 - The hail modelling also produced a number of very promising results. The predictors were able to produce a random forest classification algorithm that accurately predicted 80% true positives of known positives when trained on the full dataset. The presicion and recall of the model increases with training size and with further samples for more types of hail events, it will likely improve further.
@@ -290,7 +290,7 @@ The discovery of the Nepal Earthquake was a positive confirmation of our search 
 
 ***Stakeholder Recommendation and Next Steps***
 
-The following recommendations will improve this analysis prior to model deployment.
+The following recommendations will improve this analysis prior to model deployment:
 
 1. Introduce more hail events to strengthen our classification model. More mid-tier events (i.e.: between the Sydney and Brisbane magnitude of loss) and more transitional events (<100M AUD) would allow us to make more confident conclusions about the terms driving the severe event classification.
 2. Create a method that infers location from text and investigate clustering with known tweet location data. This would significantly improve the volume of corrdinates in the data and our knowledge of tweet locations.
@@ -300,7 +300,7 @@ The following recommendations will improve this analysis prior to model deployme
 6. Also investigate alternative data sources could enhance this type of investigation. Text classification of facebook posts and image recognition of instagram posts are other potential social resources.
 
 ***Model Deployment:***
-The following diagram outlines a potential model deployment framework for the random forest classification model:
+The following diagram outlines a potential deployment framework for the random forest classification model:
 
 <img src="model_deployment.png" alt="">
 Check back next week for the final presentation and closing words...
