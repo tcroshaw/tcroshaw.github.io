@@ -304,3 +304,5 @@ The following diagram outlines a potential model deployment framework for the ra
 
 <img src="model_deployment.png" alt="">
 Check back next week for the final presentation and closing words...
+
+#### ![Homepage](https://tcroshaw.github.io/)
