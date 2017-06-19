@@ -8,18 +8,18 @@ _Project Introduction
 
 The main objective of this project is to develop a model that can predict a natural catastrophe from social data. 
 
-Following an exploratory data analysis, I will use natural language processing to analyse social posts and investigate which machine learning algorithms generate the most robust models to prove my hypothesis - that language, volume and interconnectivity of social posts can indicate a significant catastrophe is occurring. 
+I will use natural language processing to analyse social posts and investigate which machine learning algorithms generate the most robust models to prove my hypothesis that language, volume and interconnectivity of social posts can indicate a significant catastrophe is occurring. 
 
 The factors that determine a natural 'catastrophe', particularly from an insurance perspective, include financial/insurance loss, the number of claims or damage reports and the geographic extent. These will be the key indicators of catastrophic loss I hope to get from the model.
 
-As it is not possible to analyse all catastrophe types within the period of the Capstone, I will focus on analysing **Twitter data** for major Australian **hail storm** events. I have selected two events for my analysis:
+The study will focus on analysing **Twitter data** for major Australian **hail storm** events. I have selected two events for my analysis:
 
 - Brisbane Hail Storm (27th November 2014): AUD 1,400m insurance loss
 - Sydney Hail Storm (25th April 2015): AUD 400m insurance loss
 
-I have chosen these events as they are two of the largest hail insurance losses since the age of Twitter, but their catastrophic loss attributes (loss, claims and geography) are significantly different.
+I have chosen these events as they are two of the largest hail insurance losses since the age of Twitter and their catastrophic loss attributes (loss, claims and geography) are significantly different.
 
-Now the datasets have been decided I can refine the project goals into two key questions:
+The specific goals of this investigation can be outlined in two main questions:
 - Can twitter data detect hail events from the language people use in tweets?
 - Can twitter data identify catastrophic hail events of differing severity?
 
@@ -27,10 +27,10 @@ To introduce you to my project, please follow the link to the slide deck of my 3
 
 __[Capstone Part-01 Presentation](https://github.com/tcroshaw/GA_DSI_Capstone/blob/master/part-01/tom_part_01_presentation.pdf)__
 
-In Part 1 of the Data Science Immersive Capstone, the brief was to choose a topic and problem, describing your goals & criteria for success, potential audience(s), and identifying 1-2 potential datasets. 
+This project was performed as part of General Assembley's Data Science Immersive Capstone. The initial deliverable was to choose a topic and problem, describing your goals & criteria for success, potential audience(s), and identifying 1-2 potential datasets. The format to present this information was a slide deck and Pecha Kucha format, 3 slides in 3 minutes! This was a lightning fast introduction to our project and it provided a valuable opportunity to train our thoughts into what the success criteria of our projects will be and how the analysis could be structured.
 
-The format to present this information is in a slide deck and Pecha Kucha format, 3 slides in 3 minutes! Whilst this was a lightning fast introduction to our project, it provided a valuable opportunity to train our thoughts into what the success criteria of our projects will be and how the analysis may be structured.
-
+                                                   ***
+                                                   
 Now that the project is pitched, I will begin exploring my data further and report back with my findings.
 
 
@@ -40,20 +40,14 @@ Now that the project is pitched, I will begin exploring my data further and repo
 
 <img src="wordcloud_hail_sample.png" alt="">
 
-In this stage of the investigation I will refine the problem statement, deliverables and perform an exploratory data analysis on my main Twitter dataset.
+In this stage of the investigation I will refine the problem statement, deliverables and perform an exploratory data analysis on my main Twitter dataset, the Brisbane Hailstorm.
 
-Some specific goals of this project are to:
+The specific goals of this project are to:
 
 - Identify language in tweets that confirms a specific type of catastrophe is occuring (i.e.: a hail storm)
 - Identify language in tweets that suggests damage to property or infrastructure is occuring as a result of the event
 - Recognise sentiment in tweets that indiciates a _severe_ event is occuring (extreme words such as "massive" or "terrifying")
-- And ultimately... build a model that can effectively classify tweets that indicate a catastrophic event..
-
-I will evaluate the success of my project using the following criteria:
-
-- Effectively processing the twitter data to identify expected signatures (i.e.: key words such as 'hail', 'storm', 'damage') that indicate the type of event and whether it is severe (i.e.: damaging).
-- Observe relationships and sentiment in the language of the tweet.
-- Develop an algorithm, or a combination of algorithms, that can confidently determine a catastrophic hail event from tweets.*
+- And ultimately... build a model that can effectively classify tweets that indicate a catastrophic event...
 
 *Note that at this stage the target variables for classification are still under investigation. Part-03 will refine my modelling approach...
 
@@ -61,25 +55,23 @@ I will evaluate the success of my project using the following criteria:
 
 ### _Data!_
 
-My key twitter data were sourced from _Sifter_. Sifter is a service that provides search and retrieve access to every undeleted Tweet in the history of Twitter.
+The historical twitter data were sourced from _Sifter_. Sifter is a service that provides search and retrieve access to every undeleted Tweet in the history of Twitter.
 
 https://sifter.texifter.com/
 
-For my project I obtained two datasets:
+For this project I obtained two datasets:
 
 **Primary dataset: Brisbane Hail Storm** With guidance from Sifter, I performed the following search function to extract the data:
 
 _Rule: (contains hail OR storm OR damage OR flood OR insur OR "golf ball"~6 OR "tennis ball"~6 OR lightning OR thunder OR #brisbanehail OR #brisbanestorm OR "brisbane hail"~6 OR "brisbane storm"~6 OR #australiahail OR #australiastorm OR "australia hail"~6 OR "australia storm"~6 OR #auhail OR #austorm OR "au hail"~6 OR "au storm"~6 OR #qldhail OR #qldstorm OR "qld hail"~6 OR "qld storm"~6 OR #queenslandhail OR #queenslandstorm OR "queensland hail"~6 OR "queensland storm"~6 -(brisbane OR qld OR queensland OR australia OR au OR seqld) All duplicates removed._
 
-The data query aimed to capture all potential tweets that could relate to the identified hail event on 27th November 2014. I extracted 3 days worth of data however I will only analyse a 24 hour period either side of the time the hail occured (15:00 - 17:00 AEDT) as I am primarily interested in 'real-time' indicators.
+The data query aimed to capture all potential tweets that relate to the hail event on 27th November 2014. I extracted 3 days worth of data however I will only analyse a 24 hour period either side of the time the hail occured (15:00 - 17:00 AEDT) as I am primarily interested in 'real-time' indicators.
 
-As this event impacted a larger geographical area and produced a higher insured loss, I will use this as my primary dataset for the EDA/model building (i.e.: my training data).
+Because this event impacted a larger geographical area and produced a higher insured loss, I will use this as my primary dataset for the exploratory model development.
 
 **Secondary dataset: Sydney Hail Storm** I performed a similar search in Sifter to gather data for a hail event in Sydney on 25th April 2015.
 
 _Rule: (contains hail OR storm OR damage OR flood OR "golf ball"~6 OR "tennis ball"~6 OR insur OR lightning OR thunder OR #sydneyhail OR #sydneystorm OR "sydney hail"~6 OR "sydney storm"~6 OR #australiahail OR #australiastorm OR "australia hail"~6 OR " australia storm"~6 OR #auhail OR #austorm OR "au hail"~6 OR "au storm"~6 OR #nswhail OR #nswstorm OR "nsw hail"~6 OR "nsw storm"~6 -(sydney OR nsw OR "new south wales" OR australia OR au) All duplicates removed._
-
-This will be used as my secondary dataset (i.e.: my test data).
 
 **Supporting dataset: ICA Catastrophe Data 2016** This dataset was sourced from the Insurance Council of Australia (ICA). "The ICA collects catastrophe related claims data from the Australian market as part of its role in supporting the industry to deliver repairs, rebuilding and recovery services following large disasters. The ICA Catastrophe Database commenced in 1967 and records insurance loss estimates for declared insurance catastrophe events." (ICA Wesbite)
 
@@ -87,16 +79,17 @@ This dataset will be used as a reference for the two major hail events in 2014 a
 
 Natural Language Processing:
 I will use natural language processing techniques to analyse the actual tweet of each twitter record. Specifically I will use NLP to:
-- Remove regular expressions, tweet segmentation and other techniques (expanded in part-03 of Capstone)
+- Remove regular expressions, segment tweets and perform other cleaning operations (expanded in part-03 of project)
 - Perform word pattern matching and frequency analysis
+- Topic Clustering
 - Analyse sentiment of the tweets (later on in Capstone).
 
 Machine Learning:
-Once I have determined the types of target (likely classifiers) I will need for my model, I will run through machine learning algorithms and modelling techniques and see which produces the optimal model. Some algorithms I have researched that may be best to use with NLP processed data are Naive Bayes, Logistic Regression, Decision Tress, Gradient Descent..? I will investigate and discuss the most appropriate methods further in part-03 of the captstone.
+Once I have determined the types of target I will need for my model, I will test classification algorithms and modelling techniques to observe which model produces the optimal results. Some  algorithms that are tradtionally good for text classification are Naive Bayes, Decision Tress and Stocatistic Gradient Descent. I will discuss the most appropriate methods further in part-03 of the blog.
 
 ## Exploratory Data Analysis - Key Insights!
 
-Now that I have performed my preliminary EDA I will share some interesting observations of the 24-hour Brisbane Hail twitter data...
+Now that I have performed my preliminary EDA I will share some interesting observations of the 24-hour Brisbane Hail data...
 
 <img src="device_tweet_count.png" alt="">
 
@@ -106,19 +99,19 @@ When investigating the devices used to produce these tweets I notice a strange s
 
 Taken from Twittascope website: "About Twittascope.com: Twittascope tweets authentic horoscopes for your Twitter account each morning. Provided by the Daily Insight Group, this leading horoscope service offers a daily dose of astrological insight."
 
-This does not sound like a reliable resource for investigate tweets on natural catastrophes (!), so although this is a large sample of data we will exclude it from our project.
+This does not sound like a reliable resource for investigate tweets on natural catastrophes (!), so although this is a large sample of data it will exclude it from our project.
 
 After I cleaned the data of all unreliable tweets, removed outliers and replaced null values, I investigated the frequency of the term 'hail' over the 24 hour period...
 
 <img src="tweet_hail_frequency.png" alt="">
 
-The above frequency distribution over the 24 hour period shows signficiant spikes in the use of word 'hail' in tweets at 6 - 8 AM GMT, which is 3 - 5PM Brisbane Daylight time. This corresponds with the known time of the major hail event in Brisbane. Another peak occurs later in the series - what could this relate to? Was there another hail event elsewhere..?
+The above frequency distribution over the 24 hour period shows signficiant spikes in the use of 'hail' in tweets at 6 - 8 AM GMT, which is 3 - 5PM Brisbane Daylight time. This corresponds with the known time of the major hail event in Brisbane. Another peak occurs later in the series - what could this relate to? Was there another hail event elsewhere..?
 
-Now we know the key event type is recognised in our data, what other terms are the most prevalent when this word was tweeted?
+Now we know the Brisbane hail event is strongly recognised in our data, what other terms are the most prevalent when this word was tweeted?
 
 <img src="hail_sample_word_tweet_count.png" alt="">
 
-The above graph shows the key words which were posted in tweets that contained the word 'hail'. Location information such as Brisbane and Australia are observed, as well as emotive words such as "massive, super, worst", all of which will be critical in my tweet classification process in the next phase of the capstone. 
+The above graph shows the key words that were posted in tweets that contained the word 'hail'. Location information such as Brisbane and Australia are observed, as well as emotive words such as "massive, super, worst", all of which will be critical in the tweet classification process and sentinment analysis in later phases of the investigation.
 
 _Could 'golf' and 'ball' be related..?_ It is common to associate hail size with objects, particularly common with objects such as "golf-ball" or "tennis-ball". I will therefore include a bigrams NLP investigation in later stages to see if this term is signficiant.
 
@@ -126,7 +119,7 @@ _Could 'golf' and 'ball' be related..?_ It is common to associate hail size with
 
 ### Next steps:
 
-For the next stage of the investigation I will refine my NLP processes by continuing to look at groups of key words and investigate topic modelling. I will then begin to trial machine learning models to use in algorithm development.
+The next stage of the investigation will refine the NLP processes by continuing to look at groups of key words and investigate topic modelling. I will then trial different algorithms to .
 
 ---
 
