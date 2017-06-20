@@ -240,7 +240,7 @@ When the optimised model is trained/tested using the two events (i.e.: trained w
 
 A subsequent classifiction analysis was performed that extracts the hail only records from the overall sample, then uses the event to create a target class. The result of this analysis is a moderately strong classification with a R2 score of 0.81 and true positive rate of 66% for severe events. An analysis of the model's feature importance reveals common words used to describe severe events (chaos, slammed, worst) as the predictors with greatest influence on the model's class prediction.
 
-<img src="features_severity.png" alt="">
+<img src="features_severity.png" alt="" width="600">
 
 These results suggest that the language used in the severe and moderate event differed and can predict a severe event reasonably well.
 
@@ -299,7 +299,7 @@ The discovery of the Nepal Earthquake was a positive confirmation of our search 
 
 ---
 
-A final note... Another natural peril in Australia is cyclone and if terms unique to this peril show up in tweets, like the incredible '#sharknado in Queensland's Cyclone Marcia in 2017, the potential to develop predictive algorithms for this and other catastrophe types is very strong! 
+A final note... Another natural peril in Australia is cyclone. If terms unique to this peril show up in tweets, like the incredible '#sharknado in Queensland's Cyclone Marcia in 2017, the potential to develop predictive algorithms for this and other catastrophe types is very strong! 
 
 <img src="sharknado.png" alt="" width="400">
 
@@ -309,7 +309,7 @@ My final presentation was given to the Data Science Immersive cohort at General 
 
 _[Final Presentation](https://tcroshaw.github.io/)_
 
-You can also view the presentation on the General Assembly Sydney facebook page (DSI2 part 3 video) at:
+You can also view the presentation on the General Assembly Sydney facebook page (DSI2 Part 3 video) at:
 
 _[General Assembly Facebook page](https://www.facebook.com/GeneralAssemblySydney/)_
 
