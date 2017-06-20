@@ -87,7 +87,7 @@ I will use natural language processing techniques to analyse the actual tweet of
 Machine Learning:
 Once I have determined the types of target I will need for my model, I will test classification algorithms and modelling techniques to observe which model produces the optimal results. Some  algorithms that are tradtionally good for text classification are Naive Bayes, Decision Tress and Stocatistic Gradient Descent. I will discuss the most appropriate methods further in part-03 of the blog.
 
-## Exploratory Data Analysis - Key Insights!
+## Exploratory Data Analysis - Key Insights
 
 Now that I have performed my preliminary EDA I will share some interesting observations of the 24-hour Brisbane Hail data...
 
@@ -127,71 +127,67 @@ The next stage of the investigation will refine the NLP processes by continuing 
 
 ![image](https://media.giphy.com/media/fsMkxhVeKwGac/giphy.gif?response_id=591da0615bfef578251edb9f)
 
-This update will outline the main results of the latest stage of the investigation and some critical feedback on my approach.
+This update will highlight the main results of the investigation so far and discussion on my approach.
 
-I have found that analysing text data is challenging, particularly Twitter data(!), but if performed correctly the results can be very powerful.
+**Analysis Methodology**
 
-**Approach**
+The approach to my analysis so far can be broken into four main sections:
 
-The approach to my analysis so far can be broken into four main sections
+_Data Cleaning_
 
-_Data Cleaning and Outlier Removal_
+In the preliminary EDA I found that cleaning user information was an important step to improve the confidence of the twitter records. In particular, removing anomalous records and removing outliers ensures records from misleading media, automated tweeting services or 'bots' are removed.
 
-In my preliminary EDA I found that cleaning the user information was a significant step in improving the confidence of my records; identifying unreliable data sources (i.e.: Twittascope!) and cleaning the data was a very important step. The date information allowed me to plot the frequency of words over time and removing outliers ensures I exclude records that are potentially from misleading media or 'bots'.
+The Sydney hail event has now been integrated and processed with the Brisbane hail event in a single dataset. This ensures consistency in data engineering.
 
-I have now integrated the Sydney hail event and processed it with the Brisbane hail event in a single dataset. This ensures consitency in data engineering.
+_Bag-Of-Words Analysis:_
 
-_Bag-Of-Words Exploratory Data Analysis:_
+As discussed in my previous update, tokenisation, stop-word removal and other natural language processing techniques are critical steps in this project. The final output is a vectorised dataframe of all key words communicated in tweets. Vectorisation also allows potential targets to be created for classification modelling (i.e.: using the 'hail' word use as a class). This analysis shows a clear skew of word counts to low frequency, as expected, however some words are prevalent throughout tweet samples due to the volume of tweets on specific subjects (i.e.: the hail events). 
 
-As previously discussed, tokenisation, stop-word removal and other natural language processing techniques are critical steps in this project. The output following these text cleaning exercises is a vectorised dataframe of all the key words used in tweets. Vectorisation also allows me to create targets for classification (i.e.: using the 'hail' word use as a class).
-
-Analysis of this data has shown that within our sample there is clearly a skew of word counts to low frequency (as expected!) however there are some key words which are prevalent throughout tweet samples, which is likely due to the volume of tweets on specific subjects (i.e.: the hail events). 
-
-Comparing the words that occur during the two events, especially over time, has been crucial in supporting my idea that twitter can identify natural catastrophes of significance... So much so that another type of event was recorded within my EDA!
+Comparing the words that occur in each hail event is been crucial in supporting my idea that twitter can identify natural catastrophes of significance... So much so that another type of event was indentified!
 
 <img src="top_words_corr.png" alt="">
 
-The highest correlated words in my combined dataset (for both Brisbane and Sydney events) are: quake, hits, big and Nepal... We can now deduce that the twitter data also picked up another major natural catastrophe on this date: the Nepal Earthquake on 25th April 2015!
+The highest correlated words are: quake, hits, big and Nepal... We can now deduce that the twitter data also picked up another major natural catastrophe: the Nepal Earthquake on 25th April 2015!
 
 <img src="nepal_eq.jpg" alt="">
 
-This additional discovery provides validation of the searching method, showing that this analysis can not only predict hail but also other natural disasters. This increases the scope of the project as well as potential future applications.
+This discovery provides validation of the searching method and shows that this process can identify more than one type of natural disaster. This increases the scope of the project as well as future applications.
 
 Geograhic Analysis:
 
 <img src="map_hail_tweets.png" alt="">
 
-A geographic analysis of the tweet data found a concentration in 'hail' tweets over Texas. Investigation found there was another hail event that also occurred on 25th April 2015 in San Antonio, causing hail storms of up to 2 inches. There is little evidence to suggest this was very damaging but could explain the rise in hail tweets in the latter hours of Cat_ID 154.
+A geographic analysis of the tweet data found a concentration in 'hail' tweets over Texas. Research found there was another hail event that also occurred on 25th April 2015 in San Antonio, causing hail storms of up to 2 inches. There is little evidence to suggest this was significantly damaging but could explain the rise in hail tweets in the latter hours on 25th April 2015 data.
 
-_LDA - Topic Modelling_
+_Topic Modelling_
 
-Latent Dirichlet Allocation, a type of statistical model for discovering abstract "topics" that occur in a collection of text records, has helped identify the core groupings of words in the data for our samples, as well as other significant topics within the data beyond these. Grouping the data by location and time has allowed powerful analysis of the key words that occur together; by narrowing the dataset into regions which are specific to the hail events, the key words indicating hail (and potential predictors) are more strongly recognised.
+Latent Dirichlet Allocation (LDA), a statistical model for discovering "topic" clusters that occur in a collection of text records, has helped identify the core groups of words in our data. Grouping the data by location and enables powerful analysis of the key terms that occur together and by narrowing the dataset into regions which are specific to the hail events, words indicating hail are more strongly recognised.
 
 <img src="topic-modelling.png" alt="">
 
-When performing the LDA on the full dataset, two other topics were identified (as above):
+The above graph displays the LDA results, which recognise a hail event and two other topics:
 - 1. The Nepal Earthquake and 2. a very poor performance by the Melbourne Storm against the Manly Sea Eagles on 25th April 2015.
 - Other events identified over these dates were the thanksgiving period in 2014 (and the associated poor travel weather!) and tweets concerning Boko Haram.
 
 _Preliminary Algorithm Development_
 
-Whilst modelling is still in its early phase, I have identified that classification algorithms will be the most appropriate for my text analysis. To begin with, I have investigated logisitic regression and decision tree classifications. I have selected key words indentified during the Bag-of-Words analysis and topic modelling to use as predictors and generated a hail 'class' as the target variable. My preliminary investigation looks at how well the Brisbane Hail data performs...
+Whilst modelling is still in its early phase, I have identified that classification algorithms are the most appropriate models for text analysis. Initially I have investigated logisitic regression and decision tree algorithms. Words indentified during the Bag-of-Words analysis / topic modelling that indicate hail are extracted as predictors and a hail 'class' has been generated as the target variable. My preliminary investigation uses the Brisbane Hail data to train the algorithms.
 
 <img src="logregcoef.png" alt="">
 
-Overall the decision tree classification model provides a slightly higher accuracy score than the logistic regression, the coefficients plotted on the bar graph above. Both models have coefficients of determination (R^2) of greater than 0.9 however only predict ~18% of our known positive hail classes. This indicates a more robust feature selection process (including a Principle Component Analysis) and further algorithm testing must next be performed to improve model performance.
+Overall the decision tree classification provides a slightly higher accuracy score than the logistic regression (the coefficients plotted on the bar graph above). Both models have coefficients of determination (R^2) of greater than 0.9 however only predict ~18% of our known positive hail classes. This suggests a more robust feature selection process (including a Principle Component Analysis) and further algorithm testing must next be performed to improve model performance.
 
 **Lessons Learned from this stage of the project:**
 
 - Dealing with null values and removing outliers appropriately are important however there is a trade-off between improving the distribution of a variable and knocking out too much data.
-- The natural language processes and the sequence in which they are performed are very important when analysing text data, particularly 'messy' data such as tweets.
-- The method of using key terms from Bag-Of-Words and topic modelling is useful for textual analysis and identifying common terms, however using this to limit the predictors in classification modelling potentially reduces the precision of the algorithm. Despite the high accuracy of our preliminary models, feature selection must be more robust to improve model performance.
-- Other algorithms may be more appropriate for this project and further investigation will ensure the most effective machine learning methods are used.
+- Natural language processes and the sequence in which they are performed are very important when analysing text data, particularly 'messy' data such as tweets.
+- Bag-Of-Words and topic modelling is useful for indentifying major themes, however using this to limit predictors in text classification potentially reduces algorithm precision. Despite the high accuracy of our preliminary models, feature selection must be more robust to improve model performance.
+- Other algorithms may be more appropriate for this project and further testing will ensure the most effective machine learning methods are used.
 
 ***Next Steps***
 
 1. More in-depth feature selection and Principle Component Analysis
-2. Investigation of other classification models: Support Vector Machines, Naive Bayes and Random Forest in particular.
+2. Investigation of other classification models: Naive Bayes and ensemble methods in particular.
 3. Sentiment analysis of the twitter data: do attitudes of tweets classify a natural catastrophe?
 
 -----
@@ -200,102 +196,123 @@ Overall the decision tree classification model provides a slightly higher accura
 
 <img src="hail_cloud.png" alt="">
 
-This stage of the project brings together the analysis completed so far into a final delivery that includes sentiment analysis, a principle component analysis and a series of classification models.
+This stage of the project extends the analysis completed so far into a final delivery that includes sentiment analysis, a principle component analysis and an optimal classification model.
 
 ***Sentiment Analysis***
 
-Generally during very severe natural catastrophes, people tend to tweet emotive language to describe the events they're experiencing.
+During severe natural catastrophes, people generally tend to tweet emotive language to describe the events they're experiencing.
 
-_Textblob_ is python library for processing textual data. The sentiment_analysis function returns the polarity score - a measure of the negativity, the neutralness, or the positivity of the text. This function was parsed over all tweets to understand how sentiment varied in for different catastrophe types.
+_Textblob_ is python library for processing textual data. The _sentiment_analysis_ function returns a 'polarity score' - a measure of the negativity, the neutralness, or the positivity of the text. This function was parsed over all tweets to understand how sentiment varis for different catastrophe types.
 
 <img src="sentiment.png" alt="">
 
-The sentiment analysis results suggests that for the most extreme negative scores, the relative frequency of earthquake and (lesser so) hail tweets are greater than the 'all-tweets' distribution. The inverse is seen at positive sentiment scores.
+The sentiment results suggest that for the most negative polarity scores, the relative frequency of earthquake and (lesser so) hail tweets are greater than all tweets. The inverse is seen at positive sentiment scores, particularly for earthquake.
 
-Three major peaks are observed for negative scores at -0.25, -0.6 and -1.0 where either the hail or earthquake tweets exceed the frequency for all-tweet negative sentiment and in general, there are very few points where the negative sentiment of all tweets exceeds either catastrophe. This indicates the sentiment could be an indicator of catastrophic events and as such, this feature was integrated into the modelling.
-
-Interestingly there appear to be more positive tweets for the earthquake event than for the hail events. This could be people tweeting to record their safety.
+Three major peaks are observed for negative scores at -0.25, -0.6 and -1.0 where either the hail or earthquake tweets exceed the frequency for all-tweet negative sentiment and in general, there are very few points where the negative sentiment of all tweets exceeds either catastrophe. This indicates that sentiment could be an indicator of catastrophic events and as such, this feature is used as a predictor in the modelling.
 
 ***Principle Component Analysis***
 
-A Principle Component Analysis was performed to investigate whether a smaller number of uncorrelated variable represented a large amount of variance in the dataset and if I can reduce the multicolinearity by reducing the number of variables.
-All word predictors (995 in total once locations and hail references were removed) were assessed in the principle component analysis to review the dimensionality.
+A Principle Component Analysis was performed to investigate whether a smaller number of uncorrelated variables represent a large amount of variance in the dataset, and as such, whether the multicolinearity could be reduced by limiting the number of variables. All word predictors were assessed (995 in total once location and hail references were removed) in the principle component analysis to review the dimensionality.
 
 The main conclusions of the PCA are:
-- The maximum variance explained for any component is 1.2%, which is generally very low but considering the number of variables, it is fairly significant.
-- The individual explained variance graph suggests every component explains some of the variance.
+- The maximum variance explained for any component is 1.2%, which is generally low but considering the number of variables, it is fairly significant.
+- The individual explained variance graph (below) suggests all components explains _some_ of the variance.
 
 <img src="pca_components.png" alt="">
 
 - The cumulative variation suggests that if we only wanted to retain 90% of the variance, ~800 components would still need to be retained in the modelling.
-- When investigating the X's that contribute to the top-6 components, no single word (x) contributes significantly to the component's overall variance apart from PC1 and the word 'wolf'.
+- When investigating the predictors that contribute to the top-6 components, no single predictor contributes significantly to the component's overall variance apart from PC1 and the word 'wolf'.
 
-Little evidence suggests that removing principle components would signficantly reduce dimensionality enough to improve model performance, therefore all predictors were used in the final model development.
+The conclusion is that there is little evidence suggests that removing components would signficantly reduce dimensionality enough to improve model performance. Therefore all predictors were used in the final model development.
 
 ***Classification Algorithm Investigation***
 
 #### 1. Hail Modelling 
 
-A random forest classification algorithm was found to be the optimal model for the hail class target. The principle component analysis did not suggest that limiting components would be effective in reducing dimensionality, therefore all predictors (i.e.: words in the vectorised, normalised data) would be used in modelling. Whilst Naive Bayes, Stochastic Gradient Descent and Decision Trees all provided high accuracy score, their f1 scores were less than the ensemble random forest classifier, which was driven by the high recall value of the hail-class prediction (see ROC curve below for overall classification performance of each tested model). When the random forest classifier was optimised via gridsearching, the hyperparameters and fit with 100% of the data increased the recall to 0.82; a very positive result for the ability of tweets to predict hail.
+A random forest classification algorithm was found to be the optimal model for the hail class target. The principle component analysis did not suggest that limiting components would be effective in reducing dimensionality, therefore all predictors (i.e.: words in the vectorised, normalised data) were used in modelling. Naive Bayes, Stochastic Gradient Descent and Decision Trees all provided high accuracy scores but their f1 scores, the harmonic mean of precision and recall, were less than the random forest classifier. Each model's f1 scores are driven by the recall value of the hail-class prediction - see the ROC curve below for overall classification performance of each tested model. When the random forest classifier was optimised via gridsearching and fit with 100% of the data, thee recall increased to 0.82; a very positive result for the ability of tweets to predict hail.
 
 <img src="roc_hail_models.png" alt="">
 
+_A note on ROC Curves:
+The **Receiver Operating Characteristic** curve is a plot of the true positive rate against the false positive rate of a diagnostic test. The Area Under the Curve (AUC) is a measure of the classification accuracy: the closer the curve follows the left and top border of the ROC space, the more accurate the test._
+
 #### 2. Severity Modelling
 
-When using the optimised model to train/test for each event, the classification results were very poor despite their high accuracy scores. This indicates that the tweets in each events use different language to communicate the hail. A subsequent classifiction analysis, using each event as class for a hail-only subset of the data, confirms this belief by producing moderately strong classification. It also produces common words used to describe severe events (chaos, slammed, worst) as the features with highest importance.
+When the optimised model is trained/tested using the two events (i.e.: trained with the Brisbane data then tested with Sydney), the classification results were poor despite their high accuracy scores. This indicates that the tweets in each events use different language to communicate the hail. 
+
+A subsequent classifiction analysis was performed that extracts the hail only records from the overall sample, then uses the event to create a target class. The result of this analysis is a moderately strong classification with a R2 score of 0.81 and true positive rate of 66% for severe events. An analysis of the model's feature importance reveals common words used to describe severe events (chaos, slammed, worst) as the predictors with greatest influence on the model's class prediction.
 
 <img src="features_severity.png" alt="">
 
+These results suggest that the language used in the severe and moderate event differed and can predict a severe event reasonably well.
+
 #### 3. Multiple Catastrophe Classification
 
-A final analysis then introduced earthquake as a class with hail. This produced a high accuracy score of over 0.95 and strong classification metrics, particularly for earthquake. 
+A final analysis then introduced **earthquake** as an additional class with hail. This produces a high accuracy score of over 0.95 and strong classification metrics, particularly for earthquake. 
 
 <img src="eq_report.png" alt="" width="400">
 
-The moderate performance by hail in this model suggests that indepenent classification models for each natural peril will likely be optimal over a combined catastrophe classification. Further investigation is needed to determine how strong the earthquake classification performs alone.
+The poor performance of hail in this model suggests that indepenent classification models for each natural peril are likely optimal over a combined catastrophe classification. It also implies that the language used in earthquake tweets is more indicative of that type of catastrophe rather than hail. It is likely that an independent earthquake classification algorithm will perform well alone although further investigation is needed to prove this.
 
 ---
 
-### Project Conclusion
-
-How well has this analysis delivered on our original goals?
-
-#### Can twitter data detect hail events from the language people use in tweets?
-
-The hail events were successfully identified at multiple stages in the analysis:
- - NLP successfully identifed words that relate to the hail events in question and record significant activity during the known time period of each event.
-- Topic modelling identified strong clustering of words that relate to the hail events, particularly when subsets of the data were analysed specific to the time periods of each storm.
-- Sentiment analysis recorded negative polarity of hails tweets exceeding the frequency of all-tweets. This aligns with the common trait for negative and extreme language during natural disasters.
-- The hail modelling also produced a number of very promising results. The predictors were able to produce a random forest classification algorithm that accurately predicted 80% true positives of known positives when trained on the full dataset. The presicion and recall of the model increases with training size and with further samples for more types of hail events, it will likely improve further.
-
-#### Can twitter data identify severe catastrophic hail events?
-
-Knowing the impact of the Brisbane and Sydney hail events allowed us to draw some conclusions on how well language recognised more damaging catastrophes. There were a number of results that correctly indicate the severity of both events:
-- NLP: Recognition of terms relating to severity within the NLP processes; specifically the bag-of-words analysis and topic modelling of each event.
-- Training and testing the optimal hail model algorithm on each event. The poor ability to predict hail in each event suggests that is significant difference in the predictors that drive hail classification in each case.
-- The event classification analysis produced strong results at predicting each again, reinforcing the difference between events. The predictors that drive this classifciation are words that indicate an extreme event such as _chaos, massive, super and slammed_.
-
-##### Extension... Can twitter data identify other types of catastrophic events?
-
-The discovery of the Nepal Earthquake was a positive confirmation of our search criteria and NLP process and allowed us to broaden the scope of the project into a third modelling investigation. The combination of earthquake with the hail class provided a promising result again, particularly for the earthquake classification had higher a f1 score than hail and the most positive class of all three. This suggests that tweets can very effectively recognise earthquake events without the term existing, likely due to such specific terminology commonly used for that type of disaster such as _magnitude and hits_.
-
----
-
-***Stakeholder Recommendation and Next Steps***
+***Stakeholder Recommendations and Next Steps***
 
 The following recommendations will improve this analysis prior to model deployment:
 
-1. Introduce more hail events to strengthen our classification model. More mid-tier events (i.e.: between the Sydney and Brisbane magnitude of loss) and more transitional events (<100M AUD) would allow us to make more confident conclusions about the terms driving the severe event classification.
-2. Create a method that infers location from text and investigate clustering with known tweet location data. This would significantly improve the volume of corrdinates in the data and our knowledge of tweet locations.
+1. Introduce more hail events to strengthen the classification model. More mid-tier events (i.e.: between the Sydney and Brisbane magnitude of loss) and more transitional events (<100M AUD) would allow us to make more confident conclusions about the terms driving severe event classification.
+2. Create a method that infers location from text and investigate clustering with known tweet location data. This would significantly improve the number of coordinates and tweet locations.
 3. Investigate sentiment analysis for the specific events - does polarity differ for more/less severe events?
 4. Further algorithm analysis should be performed. This includes more intensive training/testing of data beyond the 50/50 split for the current algorithms and looking at others such as SVM.
 5. Investigate other types of natural catastrophe. Earthquake was already identified but bushfires, floods and cyclones are also very common in Australia.
-6. Also investigate alternative data sources could enhance this type of investigation. Text classification of facebook posts and image recognition of instagram posts are other potential social resources.
+6. Investigating alternative data sources could enhance this analysis. Text classification of facebook posts and image recognition of instagram posts are other potential social resources.
 
 ***Model Deployment:***
-The following diagram outlines a potential deployment framework for the random forest classification model:
+The following diagram outlines a potential deployment framework for the classification model:
 
 <img src="model_deployment.png" alt="">
+
 Check back next week for the final presentation and closing words...
+
+---
+
+## 9th June 2017 - Summary and Final Presentation
+
+To close this blog off I will summarise how well has this analysis delivered the project goals...
+
+#### Can twitter data detect hail events from the language people use in tweets?
+
+The hail events were successfully identified at multiple stages of the analysis:
+ - NLP identifes words that relate to the hail events in question and record significant activity during the known time period of each event.
+- Topic modelling produces strong clustering of words that relate to the hail events, particularly when subsets of the data were analysed specific to the time periods of each storm.
+- Sentiment analysis records negative polarity of hails tweets exceeding the frequency of all-tweets. This aligns with common understanding for negative, extreme language during natural disasters.
+- The hail modelling also produces a number of very promising results. The predictors trained a random forest classification algorithm that accurately predicted ~80% true positives of known positives. The presicion and recall of the model increase with training size and with further samples for more types of hail events, it will likely improve further.
+
+#### Can twitter data identify severe catastrophic hail events?
+
+Knowing the impact of the Brisbane and Sydney hail events allowed us to draw some conclusions on how well language recognises more damaging catastrophes. There were a number of results that correctly identify the more severe event:
+- NLP recognises language that relates to severit, specifically the bag-of-words analysis and topic modelling of each event.
+- Training and testing the optimal hail algorithm using each event suggests there is significant difference in the predictors that drive hail classification in each case.
+- The event classification produces positive results when predicting different severities, reinforcing the difference between events. The predictors that drive this classifciation are words that indicate extreme events such as _chaos, massive, super and slammed_.
+
+##### Extension... Can twitter data identify other types of catastrophic events?
+
+The discovery of the Nepal Earthquake was a positive confirmation of our search criteria and NLP process. It also allowed us to broaden the scope of the project into a third modelling investigation. The combination of earthquake with the hail class provides a promising result for the second peril and suggests that tweets can effectively recognise earthquake events without the term existing, likely due to such specific terminology commonly used for that type of disaster such as _magnitude and hits_.
+
+---
+
+My final presentation was given to the Data Science Immersive cohort at General Assembly on 9th June 2017. To view the slide deck, please use the following link...
+
+_[Final Presentation](https://tcroshaw.github.io/)_
+
+You can also view the presentation on the General Assembly Sydney facebook page at:
+
+https://www.facebook.com/GeneralAssemblySydney/
+
+For those who would like to delve deeper into the technical components of the project, please feel free to review the final jupyter notebook on my Githib page:
+
+_[Technical Notebook](https://tcroshaw.github.io/)_
+
+Please feel free to reach out to me via LinkedIn or twitter for more information on this analysis.
 
 _[Back to Tom's Homepage](https://tcroshaw.github.io/)_
