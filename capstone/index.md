@@ -31,7 +31,7 @@ This project was performed as part of General Assembley's Data Science Immersive
 
 Now that the project is pitched, I will begin exploring my data further and report back with my findings.
 
-
+------
 ------
 
 ## 5th May 2017 - Brisbane Hailstorm - A Preliminary Exploratory Data Analysis
@@ -49,7 +49,7 @@ The specific goals of this project are to:
 
 *Note that at this stage the target variables for classification are still under investigation. Part-03 will refine my modelling approach...
 
-## Project Methodology
+***Project Methodology***
 
  **Data!**
 
@@ -120,6 +120,7 @@ _Could 'golf' and 'ball' be related..?_ It is common to associate hail size with
 The next stage of the investigation will refine the NLP processes by continuing to look at groups of key words and investigate topic modelling. I will then trial different algorithms to .
 
 ---
+---
 
 ## 17th May 2017 - NLP Continued, Preliminary Modelling and... Another Type of Catastrophe?
 
@@ -182,6 +183,7 @@ Overall the decision tree classification provides a slightly higher accuracy sco
 
 The next stage of the project will include feature selection and Principle Component Analysis. I will also investigate other classification models: Naive Bayes and ensemble methods in particular and analyse the sentiment of the tweets...
 
+-----
 -----
 
 ## 6th June 2017 - Catastrophe Classification Models: Development and Results
@@ -266,6 +268,7 @@ The following diagram outlines a potential deployment framework for the classifi
 
 Check back next week for the final presentation and closing words...
 
+---
 ---
 
 ## 9th June 2017 - Summary and Final Presentation
