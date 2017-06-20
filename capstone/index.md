@@ -1,4 +1,4 @@
-# Can Social Data Predict a Natural Catastrophe?
+# Can Social Data Predict Severe Natural Catastrophes?
 
 ![image](https://media.giphy.com/media/CXLPSXYcP0mHe/giphy.gif)
 
@@ -151,8 +151,6 @@ The highest correlated words are: quake, hits, big and Nepal... We can now deduc
 
 This discovery provides validation of the searching method and shows that this process can identify more than one type of natural disaster. This increases the scope of the project as well as future applications.
 
-_Spatial Analysis:_
-
 <img src="map_hail_tweets.png" alt="">
 
 A geographic analysis of the tweet data found a concentration in 'hail' tweets over Texas. Research found there was another hail event that also occurred on 25th April 2015 in San Antonio, causing hail storms of up to 2 inches. There is little evidence to suggest this was significantly damaging but could explain the rise in hail tweets in the latter hours on 25th April 2015 data.
@@ -272,7 +270,7 @@ Check back next week for the final presentation and closing words...
 
 ## 9th June 2017 - Summary and Final Presentation
 
-To close this blog off I will summarise how well has this analysis delivered the project goals...
+To close this blog off I will summarise how well the analysis delivered the project goals...
 
 ***Can twitter data detect hail events from the language people use in tweets?***
 
