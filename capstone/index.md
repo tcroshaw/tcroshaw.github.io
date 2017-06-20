@@ -4,7 +4,7 @@
 
 ## 13th April 2017 - Setting the Scene: A Catastrophic Twitter Analysis
 
-***Project Introduction***
+**Project Introduction**
 
 The main objective of this project is to develop a model that can predict a natural catastrophe from social data. 
 
@@ -51,7 +51,7 @@ The specific goals of this project are to:
 
 ## Project Methodology
 
-### _Data!_
+ **Data!**
 
 The historical twitter data were sourced from _Sifter_. Sifter is a service that provides search and retrieve access to every undeleted Tweet in the history of Twitter.
 
@@ -85,7 +85,7 @@ I will use natural language processing techniques to analyse the actual tweet of
 Machine Learning:
 Once I have determined the types of target I will need for my model, I will test classification algorithms and modelling techniques to observe which model produces the optimal results. Some  algorithms that are tradtionally good for text classification are Naive Bayes, Decision Tress and Stocatistic Gradient Descent. I will discuss the most appropriate methods further in part-03 of the blog.
 
-## Exploratory Data Analysis - Key Insights
+**Exploratory Data Analysis - Key Insights**
 
 Now that I have performed my preliminary EDA I will share some interesting observations of the 24-hour Brisbane Hail data...
 
@@ -115,7 +115,7 @@ _Could 'golf' and 'ball' be related..?_ It is common to associate hail size with
 
 <img src="golf_ball_image.jpg" alt="">
 
-### Next steps:
+**Next steps:**
 
 The next stage of the investigation will refine the NLP processes by continuing to look at groups of key words and investigate topic modelling. I will then trial different algorithms to .
 
@@ -151,7 +151,7 @@ The highest correlated words are: quake, hits, big and Nepal... We can now deduc
 
 This discovery provides validation of the searching method and shows that this process can identify more than one type of natural disaster. This increases the scope of the project as well as future applications.
 
-Geographic Analysis:
+_Spatial Analysis:_
 
 <img src="map_hail_tweets.png" alt="">
 
@@ -182,11 +182,7 @@ Overall the decision tree classification provides a slightly higher accuracy sco
 - Bag-Of-Words and topic modelling is useful for indentifying major themes, however using this to limit predictors in text classification potentially reduces algorithm precision. Despite the high accuracy of our preliminary models, feature selection must be more robust to improve model performance.
 - Other algorithms may be more appropriate for this project and further testing will ensure the most effective machine learning methods are used.
 
-***Next Steps***
-
-1. More in-depth feature selection and Principle Component Analysis
-2. Investigation of other classification models: Naive Bayes and ensemble methods in particular.
-3. Sentiment analysis of the twitter data: do attitudes of tweets classify a natural catastrophe?
+The next stage of the project will include feature selection and Principle Component Analysis. I will also investigate other classification models: Naive Bayes and ensemble methods in particular and analyse the sentiment of the tweets...
 
 -----
 
@@ -225,7 +221,7 @@ The conclusion is that there is little evidence suggests that removing component
 
 ***Classification Algorithm Investigation***
 
-#### 1. Hail Modelling 
+**1. Hail Modelling**
 
 A random forest classification algorithm was found to be the optimal model for the hail class target. The principle component analysis did not suggest that limiting components would be effective in reducing dimensionality, therefore all predictors (i.e.: words in the vectorised, normalised data) were used in modelling. Naive Bayes, Stochastic Gradient Descent and Decision Trees all provided high accuracy scores but their f1 scores, the harmonic mean of precision and recall, were less than the random forest classifier. Each model's f1 scores are driven by the recall value of the hail-class prediction - see the ROC curve below for overall classification performance of each tested model. When the random forest classifier was optimised via gridsearching and fit with 100% of the data, thee recall increased to 0.82; a very positive result for the ability of tweets to predict hail.
 
@@ -234,7 +230,7 @@ A random forest classification algorithm was found to be the optimal model for t
 _A note on ROC Curves:
 The **Receiver Operating Characteristic** curve is a plot of the true positive rate against the false positive rate of a diagnostic test. The Area Under the Curve (AUC) is a measure of the classification accuracy: the closer the curve follows the left and top border of the ROC space, the more accurate the test._
 
-#### 2. Severity Modelling
+**2. Severity Modelling**
 
 When the optimised model is trained/tested using the two events (i.e.: trained with the Brisbane data then tested with Sydney), the classification results were poor despite their high accuracy scores. This indicates that the tweets in each events use different language to communicate the hail. 
 
@@ -244,7 +240,7 @@ A subsequent classifiction analysis was performed that extracts the hail only re
 
 These results suggest that the language used in the severe and moderate event differed and can predict a severe event reasonably well.
 
-#### 3. Multiple Catastrophe Classification
+**3. Multiple Catastrophe Classification**
 
 A final analysis then introduced **earthquake** as an additional class with hail. This produces a high accuracy score of over 0.95 and strong classification metrics, particularly for earthquake. 
 
@@ -254,7 +250,7 @@ The poor performance of hail in this model suggests that indepenent classificati
 
 ---
 
-***Stakeholder Recommendations and Next Steps***
+**Stakeholder Recommendations and Next Steps**
 
 The following recommendations will improve this analysis prior to model deployment:
 
@@ -265,7 +261,7 @@ The following recommendations will improve this analysis prior to model deployme
 5. Investigate other types of natural catastrophe. Earthquake was already identified but bushfires, floods and cyclones are also very common in Australia.
 6. Investigating alternative data sources could enhance this analysis. Text classification of facebook posts and image recognition of instagram posts are other potential social resources.
 
-***Model Deployment:***
+**Model Deployment:**
 The following diagram outlines a potential deployment framework for the classification model:
 
 <img src="model_deployment.png" alt="">
@@ -278,7 +274,7 @@ Check back next week for the final presentation and closing words...
 
 To close this blog off I will summarise how well has this analysis delivered the project goals...
 
-#### Can twitter data detect hail events from the language people use in tweets?
+***Can twitter data detect hail events from the language people use in tweets?***
 
 The hail events were successfully identified at multiple stages of the analysis:
  - NLP identifes words that relate to the hail events in question and record significant activity during the known time period of each event.
@@ -286,26 +282,26 @@ The hail events were successfully identified at multiple stages of the analysis:
 - Sentiment analysis records negative polarity of hails tweets exceeding the frequency of all-tweets. This aligns with common understanding for negative, extreme language during natural disasters.
 - The hail modelling also produces a number of very promising results. The predictors trained a random forest classification algorithm that accurately predicted ~80% true positives of known positives. The presicion and recall of the model increase with training size and with further samples for more types of hail events, it will likely improve further.
 
-#### Can twitter data identify severe catastrophic hail events?
+***Can twitter data identify severe catastrophic hail events?***
 
 Knowing the impact of the Brisbane and Sydney hail events allowed us to draw some conclusions on how well language recognises more damaging catastrophes. There were a number of results that correctly identify the more severe event:
 - NLP recognises language that relates to severit, specifically the bag-of-words analysis and topic modelling of each event.
 - Training and testing the optimal hail algorithm using each event suggests there is significant difference in the predictors that drive hail classification in each case.
 - The event classification produces positive results when predicting different severities, reinforcing the difference between events. The predictors that drive this classifciation are words that indicate extreme events such as _chaos, massive, super and slammed_.
 
-##### Extension... Can twitter data identify other types of catastrophic events?
+***Extension... Can twitter data identify other types of catastrophic events?***
 
 The discovery of the Nepal Earthquake was a positive confirmation of our search criteria and NLP process. It also allowed us to broaden the scope of the project into a third modelling investigation. The combination of earthquake with the hail class provides a promising result for the second peril and suggests that tweets can effectively recognise earthquake events without the term existing, likely due to such specific terminology commonly used for that type of disaster such as _magnitude and hits_.
 
 ---
 
-A final note... Another natural peril in Australia is cyclone. If terms unique to this peril show up in tweets, like the incredible '#sharknado in Queensland's Cyclone Marcia in 2017, the potential to develop predictive algorithms for this and other catastrophe types is very strong! 
+A final note... Another natural peril in Australia is cyclone. If terms unique to this peril show up in tweets, like the incredible '#sharknado in Queensland's Cyclone Marcia in 2017, the potential to develop predictive algorithms for this and other catastrophes is very strong! 
 
 <img src="sharknado.png" alt="" width="400">
 
 ---
 
-My final presentation was given to the Data Science Immersive cohort at General Assembly on 9th June 2017. To view the slide deck, please use the following link...
+The final presentation was given to the Data Science Immersive cohort at General Assembly on 9th June 2017. To view the slide deck please use the following link...
 
 _[Final Presentation](https://github.com/tcroshaw/ga-dsi-capstone/blob/master/final-presentation/capstone_part05_presentation.pdf)_
 
