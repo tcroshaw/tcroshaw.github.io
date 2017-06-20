@@ -4,7 +4,7 @@ Tom Croshaw is a research analyst turned data scientist with a keen interest in 
 
 ---
 
-## Can Social Data Predict a Natural Catastrophe?
+## Can Social Data Predict Severe Natural Catastrophes?
 _April - June 2017_
 
 
@@ -17,6 +17,6 @@ This project is an investigation into how Twitter data can be used to predict ma
 
 This investigation was my Data Science Immersive Capstone Project at General Assembly, Sydney. Please follow the link below to view the progress of the analysis:
 
-### [Natural Catastrophe Twitter Investigation](/capstone/index.md)
+### [Investigation Blog](/capstone/index.md)
 
 ---
