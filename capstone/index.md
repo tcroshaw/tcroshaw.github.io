@@ -89,7 +89,7 @@ Once I have determined the types of target I will need for my model, I will test
 
 Now that I have performed my preliminary EDA I will share some interesting observations of the 24-hour Brisbane Hail data...
 
-<img src="device_tweet_count.png" alt="">
+<img src="device_tweet_count.png" alt="" width="650">
 
 When investigating the devices used to produce these tweets I notice a strange source that produced the greatest number of tweets over the 24 hour sample.
 
@@ -160,7 +160,7 @@ _Topic Modelling_
 
 Latent Dirichlet Allocation (LDA), a statistical model for discovering "topic" clusters that occur in a collection of text records, has helped identify the core groups of words in our data. Grouping the data by location and enables powerful analysis of the key terms that occur together and by narrowing the dataset into regions which are specific to the hail events, words indicating hail are more strongly recognised.
 
-<img src="topic-modelling.png" alt="">
+<img src="topic-modelling.png" alt="" width="650">
 
 The above graph displays the LDA results, which recognise a hail event and two other topics:
 - 1. The Nepal Earthquake and 2. a very poor performance by the Melbourne Storm against the Manly Sea Eagles on 25th April 2015.
@@ -170,7 +170,7 @@ _Preliminary Algorithm Development_
 
 Whilst modelling is still in its early phase, I have identified that classification algorithms are the most appropriate models for text analysis. Initially I have investigated logisitic regression and decision tree algorithms. Words indentified during the Bag-of-Words analysis / topic modelling that indicate hail are extracted as predictors and a hail 'class' has been generated as the target variable. My preliminary investigation uses the Brisbane Hail data to train the algorithms.
 
-<img src="logregcoef.png" alt="">
+<img src="logregcoef.png" alt="" width="650">
 
 Overall the decision tree classification provides a slightly higher accuracy score than the logistic regression (the coefficients plotted on the bar graph above). Both models have coefficients of determination (R^2) of greater than 0.9 however only predict ~18% of our known positive hail classes. This suggests a more robust feature selection process (including a Principle Component Analysis) and further algorithm testing must next be performed to improve model performance.
 
@@ -212,7 +212,7 @@ The main conclusions of the PCA are:
 - The maximum variance explained for any component is 1.2%, which is generally low but considering the number of variables, it is fairly significant.
 - The individual explained variance graph (below) suggests all components explains _some_ of the variance.
 
-<img src="pca_components.png" alt="">
+<img src="pca_components.png" alt="" width="700">
 
 - The cumulative variation suggests that if we only wanted to retain 90% of the variance, ~800 components would still need to be retained in the modelling.
 - When investigating the predictors that contribute to the top-6 components, no single predictor contributes significantly to the component's overall variance apart from PC1 and the word 'wolf'.
@@ -225,7 +225,7 @@ The conclusion is that there is little evidence suggests that removing component
 
 A random forest classification algorithm was found to be the optimal model for the hail class target. The principle component analysis did not suggest that limiting components would be effective in reducing dimensionality, therefore all predictors (i.e.: words in the vectorised, normalised data) were used in modelling. Naive Bayes, Stochastic Gradient Descent and Decision Trees all provided high accuracy scores but their f1 scores, the harmonic mean of precision and recall, were less than the random forest classifier. Each model's f1 scores are driven by the recall value of the hail-class prediction - see the ROC curve below for overall classification performance of each tested model. When the random forest classifier was optimised via gridsearching and fit with 100% of the data, thee recall increased to 0.82; a very positive result for the ability of tweets to predict hail.
 
-<img src="roc_hail_models.png" alt="">
+<img src="roc_hail_models.png" alt="" width="700">
 
 _A note on ROC Curves:
 The **Receiver Operating Characteristic** curve is a plot of the true positive rate against the false positive rate of a diagnostic test. The Area Under the Curve (AUC) is a measure of the classification accuracy: the closer the curve follows the left and top border of the ROC space, the more accurate the test._
@@ -236,7 +236,7 @@ When the optimised model is trained/tested using the two events (i.e.: trained w
 
 A subsequent classifiction analysis was performed that extracts the hail only records from the overall sample, then uses the event to create a target class. The result of this analysis is a moderately strong classification with a R2 score of 0.81 and true positive rate of 66% for severe events. An analysis of the model's feature importance reveals common words used to describe severe events (chaos, slammed, worst) as the predictors with greatest influence on the model's class prediction.
 
-<img src="features_severity.png" alt="" width="600">
+<img src="features_severity.png" alt="" width="650">
 
 These results suggest that the language used in the severe and moderate event differed and can predict a severe event reasonably well.
 
@@ -244,7 +244,7 @@ These results suggest that the language used in the severe and moderate event di
 
 A final analysis then introduced **earthquake** as an additional class with hail. This produces a high accuracy score of over 0.95 and strong classification metrics, particularly for earthquake. 
 
-<img src="eq_report.png" alt="" width="400">
+<img src="eq_report.png" alt="" width="600">
 
 The poor performance of hail in this model suggests that indepenent classification models for each natural peril are likely optimal over a combined catastrophe classification. It also implies that the language used in earthquake tweets is more indicative of that type of catastrophe rather than hail. It is likely that an independent earthquake classification algorithm will perform well alone although further investigation is needed to prove this.
 
@@ -264,7 +264,7 @@ The following recommendations will improve this analysis prior to model deployme
 **Model Deployment:**
 The following diagram outlines a potential deployment framework for the classification model:
 
-<img src="model_deployment.png" alt="">
+<img src="model_deployment.png" alt="" width="900">
 
 Check back next week for the final presentation and closing words...
 
