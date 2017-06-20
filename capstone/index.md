@@ -283,7 +283,7 @@ The hail events were successfully identified at multiple stages of the analysis:
 ***Can twitter data identify severe catastrophic hail events?***
 
 Knowing the impact of the Brisbane and Sydney hail events allowed us to draw some conclusions on how well language recognises more damaging catastrophes. There were a number of results that correctly identify the more severe event:
-- NLP recognises language that relates to severit, specifically the bag-of-words analysis and topic modelling of each event.
+- NLP recognises language that relates to severity, specifically the bag-of-words analysis and topic modelling of each event.
 - Training and testing the optimal hail algorithm using each event suggests there is significant difference in the predictors that drive hail classification in each case.
 - The event classification produces positive results when predicting different severities, reinforcing the difference between events. The predictors that drive this classifciation are words that indicate extreme events such as _chaos, massive, super and slammed_.
 
