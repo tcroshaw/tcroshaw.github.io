@@ -307,7 +307,7 @@ A final note... Another natural peril in Australia is cyclone. If terms unique t
 
 My final presentation was given to the Data Science Immersive cohort at General Assembly on 9th June 2017. To view the slide deck, please use the following link...
 
-_[Final Presentation](https://tcroshaw.github.io/)_
+_[Final Presentation](https://github.com/tcroshaw/ga-dsi-capstone/blob/master/final-presentation/capstone_part05_presentation.pdf)_
 
 You can also view the presentation on the General Assembly Sydney facebook page (DSI2 Part 3 video) at:
 
@@ -315,7 +315,7 @@ _[General Assembly Facebook page](https://www.facebook.com/GeneralAssemblySydney
 
 For those who would like to delve deeper into the technical components of the project, please feel free to review the final jupyter notebook on my Githib page:
 
-_[Technical Notebook](https://tcroshaw.github.io/)_
+_[Technical Notebook](https://github.com/tcroshaw/ga-dsi-capstone/tree/master/technical-report)_
 
 Please feel free to reach out to me via LinkedIn or twitter for more information on this analysis.
 
