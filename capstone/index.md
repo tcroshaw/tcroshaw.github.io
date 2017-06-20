@@ -4,7 +4,7 @@
 
 ## 13th April 2017 - Setting the Scene: A Catastrophic Twitter Analysis
 
-_Project Introduction
+***Project Introduction***
 
 The main objective of this project is to develop a model that can predict a natural catastrophe from social data. 
 
@@ -29,8 +29,6 @@ __[Capstone Part-01 Presentation](https://github.com/tcroshaw/GA_DSI_Capstone/bl
 
 This project was performed as part of General Assembley's Data Science Immersive Capstone. The initial deliverable was to choose a topic and problem, describing your goals & criteria for success, potential audience(s), and identifying 1-2 potential datasets. The format to present this information was a slide deck and Pecha Kucha format, 3 slides in 3 minutes! This was a lightning fast introduction to our project and it provided a valuable opportunity to train our thoughts into what the success criteria of our projects will be and how the analysis could be structured.
 
-                                                   ***
-                                                   
 Now that the project is pitched, I will begin exploring my data further and report back with my findings.
 
 
@@ -153,7 +151,7 @@ The highest correlated words are: quake, hits, big and Nepal... We can now deduc
 
 This discovery provides validation of the searching method and shows that this process can identify more than one type of natural disaster. This increases the scope of the project as well as future applications.
 
-Geograhic Analysis:
+Geographic Analysis:
 
 <img src="map_hail_tweets.png" alt="">
 
@@ -301,13 +299,19 @@ The discovery of the Nepal Earthquake was a positive confirmation of our search 
 
 ---
 
+A final note... Another natural peril in Australia is cyclone and if terms unique to this peril show up in tweets, like the incredible '#sharknado in Queensland's Cyclone Marcia in 2017, the potential to develop predictive algorithms for this and other catastrophe types is very strong! 
+
+<img src="sharknado.png" alt="" width="400">
+
+---
+
 My final presentation was given to the Data Science Immersive cohort at General Assembly on 9th June 2017. To view the slide deck, please use the following link...
 
 _[Final Presentation](https://tcroshaw.github.io/)_
 
-You can also view the presentation on the General Assembly Sydney facebook page at:
+You can also view the presentation on the General Assembly Sydney facebook page (DSI2 part 3 video) at:
 
-https://www.facebook.com/GeneralAssemblySydney/
+_[General Assembly Facebook page](https://www.facebook.com/GeneralAssemblySydney/)_
 
 For those who would like to delve deeper into the technical components of the project, please feel free to review the final jupyter notebook on my Githib page:
 
