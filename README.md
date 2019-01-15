@@ -19,4 +19,18 @@ This investigation was my Data Science Immersive Capstone Project at General Ass
 
 ### [Investigation Blog](/capstone/index.md)
 
+
+---
+
+
+
+## Property Sales Price Regression Analysis
+_September 2017_
+
+<img src="ames_housing_data/totalsf_corr.png" alt="" width="400">
+
+This project is an investigation into how property attributes data can be used to predict sale price. It tackles the analysis from the perspective of an investment company and uses the Ames, Iowa Housing dataset to compares the impact of fixed, permanent property features to those that can be changed (i.e.: renovation potential).
+
+### [Analysis Report](/ames_housing_data/index.md)
+
 ---
