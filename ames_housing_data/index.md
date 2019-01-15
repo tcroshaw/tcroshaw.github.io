@@ -12,7 +12,7 @@ This project was undertaken from the perspective of an investment company that w
 
 The fixed variables were found to be the most predictive property attributes for sale price. 
 
-<img src="mlr_fixed_variables.png" alt="" width="700">
+<img src="mlr_fixed_variables.png" alt="" width="500">
 
 The fixed variable model uses multiple linear regression that identifies the following variables as the most predictive of sale price. They are ranked in terms of their absolute (lasso) coefficients:
 
