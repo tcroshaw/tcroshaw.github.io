@@ -43,6 +43,6 @@ The changeable feature model has an R^2 value of 0.273. These features alone are
 
 To review the results of this analysis in greater detail in the technical notebook please follow this link:
 
-_[Technical Notebook](https://github.com/tcroshaw/ames-housing-analysis/tree/master/technical-report)_
+_[Technical Notebook](https://github.com/tcroshaw/ames-housing-analysis/ames_analysis_notebook.ipynb)_
 
 _[Back to Homepage](https://tcroshaw.github.io/)_
