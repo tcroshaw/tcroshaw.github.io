@@ -2,7 +2,7 @@ Welcome to the landing page for Tom's personal github account.
 
 Tom Croshaw is a catastrophe research analyst turned data scientist with a keen interest in the natural environment, science and of course... **Data!**
 
-Here you can review example projects and the coding and analytics used to produce the insights. Please reach out to me on LinkedIn if you'd like to know more...
+Here you can review example projects with the code and analytics used to produce the insights. Please reach out to me on LinkedIn if you'd like to know more...
 
 #### [LinkedIn](https://www.linkedin.com/in/tom-croshaw/)
 
