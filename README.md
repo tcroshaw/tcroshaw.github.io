@@ -50,9 +50,9 @@ _December 2017_
 
 <img src="data_jobs_analysis/salary_boxplot.png" alt="" width="550">
 
-This analysis investigates which skills, industries and positions of data and research jobs get paid the highest salaries.
+This analysis investigates which skills, industries and positions of data and research jobs pay the highest salaries.
 
-The analysis uses data scraped from a job seeking aggreator, natural language processing and machine learning to determine which features predict the highest salaries and are most important for data science roles. The python notebooks for web scraping and the analysis are provided to guide you through the analysis and conclusions.
+The analysis uses data scraped from a job seeking aggreator, natural language processing and machine learning to determine which features predict the highest salaries, and which are most needed for data science roles. The python notebooks for web scraping and the analysis are provided to guide you through the analysis and conclusions.
 
 #### [Job Salary Analysis Report](/data_jobs_analysis/index.md)
 
