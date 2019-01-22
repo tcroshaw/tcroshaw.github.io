@@ -1,6 +1,10 @@
-Welcome to the landing page for Tom's personal github account.
+Welcome to the landing page for Tom's personal github account. 
 
-Tom Croshaw is a research analyst turned data scientist with a keen interest in the natural environment, science and of course... **Data!**
+Tom Croshaw is a catastrophe research analyst turned data scientist with a keen interest in the natural environment, science and of course... **Data!**
+
+Here you can review example projects and the coding and analytics used to produce the insights. Please reach out to me on LinkedIn if you'd like to know more...
+
+#### [LinkedIn](https://www.linkedin.com/in/tom-croshaw/)
 
 ---
 
@@ -33,6 +37,23 @@ This project is an investigation into whether property attribute data can be use
 
 The analysis uses the Ames, Iowa Housing dataset and compares the impact of fixed, permanent property features on the sales price to those that can be changed i.e.: renovation potential.
 
-#### [Analysis Report](/ames_housing_data/index.md)
+#### [Property Sales Analysis Report](/ames_housing_data/index.md)
+
+---
+
+---
+
+
+
+### Predicting Salaries of Data and Research Jobs
+_December 2017_
+
+<img src="data_jobs_analysis/salary_boxplot.png" alt="" width="550">
+
+This analysis investigates which skills, industries and positions of data and research jobs get paid the highest salaries.
+
+The analysis uses data scraped from a job seeking aggreator, natural language processing and machine learning to determine which features predict the highest salaries and are most important for data science roles. The python notebooks for web scraping and the analysis are provided to guide you through the analysis and conclusions.
+
+#### [Job Salary Analysis Report](/data_jobs_analysis/index.md)
 
 ---
