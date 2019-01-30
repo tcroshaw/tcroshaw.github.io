@@ -10,6 +10,7 @@ This investigation set out to identify the key characteristics of data and resea
 - Business Analyst
 - Research Analyst
 - Research Scientist
+
 The key information captured form scraping includes the job title, salary, location, industry and description. Once enough data was collected it was cleaned prior to modelling.
 
 ***Data Cleaning and Exploratory Data Analysis:***
