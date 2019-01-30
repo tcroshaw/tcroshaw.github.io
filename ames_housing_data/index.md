@@ -16,18 +16,18 @@ The fixed variables were found to be the most predictive property attributes for
 
 The fixed variable model uses multiple linear regression that identifies the following variables as the most predictive of sale price. They are ranked in terms of their absolute (lasso) coefficients:
 
-- Total Square Foot: 33458.162931
-- Year Built: 12568.177256
-- GF Living Area: 9852
-- Garage Area: 8389
-- Fireplaces: 7205
-- Garage Year Blt: 5034
-- Bathrooms (Number) Total: 4157
-- Lot Area: 3610
-- Garage Car Spaces: 3507
-- Lot Frontage: 3116
+1. Total Square Foot: 33458
+2. Year Built: 12568
+3. GF Living Area: 9852
+4. Garage Area: 8389
+5. Fireplaces: 7205
+6. Garage Year Blt: 5034
+7. Bathrooms (Number) Total: 4157
+8. Lot Area: 3610
+9. Garage Car Spaces: 3507
+10. Lot Frontage: 3116
 
-The coefficient of determination of this model for the train/test data (pre/2010 sales) is:
+The coefficient of determination (R^2) of this model for the train/test data (pre/2010 sales) is:
 
 - Train: 0.7876
 - **Test: 0.7912**
