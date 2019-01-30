@@ -4,6 +4,7 @@ Tom Croshaw is a catastrophe research analyst turned data scientist with a keen 
 
 Here you can review example projects with the code and analytics used to produce the insights. Please reach out to me on LinkedIn if you'd like to know more...
 
+
 #### [LinkedIn](https://www.linkedin.com/in/tom-croshaw/)
 
 ---
@@ -46,7 +47,7 @@ The analysis uses the Ames, Iowa Housing dataset and compares the impact of fixe
 
 
 ### Predicting Salaries of Data and Research Jobs
-_December 2017_
+_February 2018_
 
 <img src="data_jobs_analysis/salary_boxplot.png" alt="" width="550">
 
